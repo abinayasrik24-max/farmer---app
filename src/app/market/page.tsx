@@ -1,42 +1,70 @@
-export default function MarketPage() {
-  const crops = [
-    { name: 'Paddy', rate: '₹2400', change: '+2.5%', color: 'green' },
-    { name: 'Tomato', rate: '₹45', change: '-5%', color: 'red' },
-    { name: 'Onion', rate: '₹60', change: '+8%', color: 'green' },
-    { name: 'Brinjal', rate: '₹35', change: '+1%', color: 'green' },
-    { name: 'Cotton', rate: '₹7200', change: '+3%', color: 'green' },
-    { name: 'Sugarcane', rate: '₹3400', change: '0%', color: 'gray' },
-    { name: 'Maize', rate: '₹2100', change: '+4%', color: 'green' },
-    { name: 'Groundnut', rate: '₹5800', change: '-2%', color: 'red' },
-    { name: 'Banana', rate: '₹28', change: '+6%', color: 'green' },
-    { name: 'Coconut', rate: '₹35', change: '+1.5%', color: 'green' },
-  ]
-
+export default function MarketPricePage() {
   return (
-    <div style={{padding: '40px', maxWidth: '800px', margin: '0 auto'}}>
-      <h1 style={{color: '#2e7d32'}}>Market Price - Coimbatore Mandi</h1>
-      <p style={{color: '#666'}}>Last updated: {new Date().toLocaleString('en-IN')}</p>
+    <div style={{
+      backgroundImage: 'url("https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1600")',
+      backgroundSize: 'cover',
+      minHeight: '100vh'
+    }}>
       
-      <div style={{marginTop: '30px'}}>
-        {crops.map(crop => (
-          <div key={crop.name} style={{
-            background: 'white', 
-            padding: '20px', 
-            margin: '15px 0', 
-            borderRadius: '10px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-          }}>
-            <h3 style={{margin: 0}}>{crop.name}</h3>
-            <div style={{textAlign: 'right'}}>
-              <h2 style={{margin: 0}}>{crop.rate}/Quintal</h2>
-              <span style={{color: crop.color, fontWeight: 'bold'}}>{crop.change}</span>
-            </div>
-          </div>
-        ))}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: 'calc(100vh - 100px)',
+        padding: '40px 20px'
+      }}>
+        
+        <div style={{
+          background: 'rgba(255,255,255,0.95)',
+          padding: '60px 50px',
+          borderRadius: '20px',
+          width: '100%',
+          maxWidth: '800px',
+          boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
+        }}>
+          
+          <h1 style={{color: '#2e7d32', fontSize: '36px', marginBottom: '30px', textAlign: 'center'}}>
+            Live Market Prices
+          </h1>
+          
+          <p style={{fontSize: '16px', color: '#555', marginBottom: '35px', textAlign: 'center'}}>
+            Daily crop prices from major markets across Tamil Nadu
+          </p>
+
+          <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '16px'}}>
+            <thead>
+              <tr style={{background: '#2e7d32', color: 'white'}}>
+                <th style={{padding: '15px', textAlign: 'left'}}>Crop</th>
+                <th style={{padding: '15px', textAlign: 'left'}}>Market</th>
+                <th style={{padding: '15px', textAlign: 'right'}}>Price/Kg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{borderBottom: '1px solid #ddd'}}>
+                <td style={{padding: '15px'}}>Rice</td>
+                <td style={{padding: '15px'}}>Coimbatore</td>
+                <td style={{padding: '15px', textAlign: 'right'}}>₹42</td>
+              </tr>
+              <tr style={{borderBottom: '1px solid #ddd', background: '#f9f9f9'}}>
+                <td style={{padding: '15px'}}>Onion</td>
+                <td style={{padding: '15px'}}>Madurai</td>
+                <td style={{padding: '15px', textAlign: 'right'}}>₹28</td>
+              </tr>
+              <tr style={{borderBottom: '1px solid #ddd'}}>
+                <td style={{padding: '15px'}}>Tomato</td>
+                <td style={{padding: '15px'}}>Chennai</td>
+                <td style={{padding: '15px', textAlign: 'right'}}>₹35</td>
+              </tr>
+              <tr>
+                <td style={{padding: '15px'}}>Cotton</td>
+                <td style={{padding: '15px'}}>Tiruppur</td>
+                <td style={{padding: '15px', textAlign: 'right'}}>₹72</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
       </div>
     </div>
-  )
+  );
 }
