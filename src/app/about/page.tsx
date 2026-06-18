@@ -1,46 +1,89 @@
-"use client";
-import Link from "next/link";
+'use client';
+import Link from 'next/link';
 
-export default function About() {
-  const bgStyle = {
-    backgroundImage: "url('https://images.pexels.com/photos/2132126/pexels-photo-2132126.jpeg?auto=compress&cs=tinysrgb&w=1600')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    minHeight: "100vh"
-  };
-
+export default function AboutPage() {
   return (
-    <div style={bgStyle}>
-      {/* Navigation Menu */}
-      <div style={{backgroundColor: 'rgba(46, 125, 50, 0.9)', padding: '15px', display: 'flex', justifyContent: 'center', gap: '40px'}}>
-        <Link href="/" style={{color: 'white', textDecoration: 'none', fontSize: '18px'}}>Home</Link>
-        <Link href="/about" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold', fontSize: '18px'}}>About</Link>
-        <Link href="/dashboard" style={{color: 'white', textDecoration: 'none', fontSize: '18px'}}>Login</Link>
-      </div>
+    <div style={{
+      backgroundImage: 'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      minHeight: '100vh',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      
+      <nav style={{
+        background: '#2e7d32',
+        padding: '15px 50px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: 'white',
+        fontWeight: 'bold'
+      }}>
+        <h1 style={{fontSize: '24px', margin: 0}}>Smart Farmer Portal</h1>
+        <div style={{display: 'flex', gap: '30px'}}>
+          <Link href="/" style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+          <Link href="/about" style={{color: 'white', textDecoration: 'none'}}>About</Link>
+          <Link href="/market-price" style={{color: 'white', textDecoration: 'none'}}>Market</Link>
+          <Link href="/login" style={{color: 'white', textDecoration: 'none'}}>Login</Link>
+          <Link href="/tips" style={{color: 'white', textDecoration: 'none'}}>Agri Tips</Link>
+          <Link href="/schemes" style={{color: 'white', textDecoration: 'none'}}>Schemes</Link>
+          <Link href="/help" style={{color: 'white', textDecoration: 'none'}}>Help</Link>
+        </div>
+      </nav>
 
-      {/* Main Content */}
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh', padding: '40px'}}>
-        <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '50px', borderRadius: '20px', maxWidth: '700px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)'}}>
-          <h1 style={{color: '#2e7d32', fontSize: '36px', textAlign: 'center', marginTop: 0}}>About Smart Farmer App</h1>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: 'calc(100vh - 60px)',
+        padding: '40px 20px'
+      }}>
+        
+        <div style={{
+          background: 'rgba(255,255,255,0.95)',
+          padding: '60px 50px',
+          borderRadius: '20px',
+          width: '100%',
+          maxWidth: '800px',
+          boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
+        }}>
           
-          <p style={{fontSize: '18px', lineHeight: '1.8', color: '#444', marginTop: '25px'}}>
-            Smart Farmer App is a comprehensive digital platform designed to help farmers make informed, data-driven decisions for optimal crop management and increased profitability.
+          <h1 style={{color: '#2e7d32', fontSize: '40px', marginBottom: '25px', textAlign: 'center'}}>
+            About Smart Farmer Portal
+          </h1>
+          
+          <p style={{fontSize: '17px', color: '#555', lineHeight: '1.8', marginBottom: '25px', textAlign: 'center'}}>
+            Smart Farmer Portal is a digital platform designed to empower farmers with data-driven insights for modern agriculture.
           </p>
-          
-          <h3 style={{color: '#2e7d32', fontSize: '22px', marginTop: '35px', marginBottom: '15px'}}>Key Features:</h3>
-          <ul style={{fontSize: '17px', lineHeight: '2', color: '#555', paddingLeft: '20px', marginTop: 0}}>
-            <li>Monitor crop growth, track expenses, and record yields in real-time</li>
-            <li>Access live market prices to maximize selling opportunities</li>
-            <li>Calculate detailed profit and loss for each harvest cycle</li>
-            <li>Receive timely weather alerts and proven farming best practices</li>
-            <li>Secure dashboard to manage all farm data in one place</li>
-          </ul>
-          
-          <p style={{fontSize: '18px', lineHeight: '1.8', color: '#444', marginTop: '30px'}}>
-            Our mission is to empower farmers with modern technology, reduce dependency on intermediaries, and increase agricultural income through smart insights and analytics.
-          </p>
+
+          <div style={{marginBottom: '35px'}}>
+            <h3 style={{color: '#2e7d32', fontSize: '22px', marginBottom: '15px'}}>Our Mission</h3>
+            <p style={{fontSize: '16px', color: '#555', lineHeight: '1.7'}}>
+              To provide accessible technology that helps farmers increase productivity, reduce costs, and make informed decisions through real-time market data, weather forecasts, and crop management tools.
+            </p>
+          </div>
+
+          <div style={{marginBottom: '35px'}}>
+            <h3 style={{color: '#2e7d32', fontSize: '22px', marginBottom: '15px'}}>Key Features</h3>
+            <ul style={{fontSize: '16px', color: '#555', lineHeight: '1.8', paddingLeft: '20px'}}>
+              <li>Track crop details and growth stages</li>
+              <li>Monitor live market prices across regions</li>
+              <li>Access accurate weather forecasts</li>
+              <li>Calculate income, expenses, and net profit</li>
+              <li>Receive expert agricultural guidance</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 style={{color: '#2e7d32', fontSize: '22px', marginBottom: '15px'}}>Why Choose Us</h3>
+            <p style={{fontSize: '16px', color: '#555', lineHeight: '1.7'}}>
+              Built specifically for Indian farmers, our platform combines simplicity with powerful analytics. No technical knowledge required. Secure login, personalized dashboard, and mobile-friendly design ensure farmers can access information anytime, anywhere.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
-  )
+  );
 }
