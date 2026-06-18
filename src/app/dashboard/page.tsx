@@ -84,21 +84,7 @@ export default function Dashboard() {
             <h3 style={{marginTop: 0, color: '#2e7d32'}}>🌾 Crop</h3>
             <p style={{fontSize: '18px'}}>{farmer.crop}</p>
             <p>📏 Area: {farmer.area}</p>
-            <button 
-              onClick={() => alert(`Selling ${farmer.crop} at ₹${farmer.marketRate}/Quintal`)}
-              style={{
-                marginTop: '10px', 
-                padding: '8px 16px', 
-                background: '#2e7d32', 
-                color: 'white', 
-                border: 'none', 
-                borderRadius: '5px', 
-                cursor: 'pointer',
-                fontWeight: 'bold'
-              }}
-            >
-              Sell Crop
-            </button>
+            <button onClick={() => alert('Sold!')}>Sell Crop</button>
           </div>
           
           <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '20px', borderRadius: '15px'}}><h3 style={{marginTop: 0, color: '#2e7d32'}}>📈 Market Rate</h3><p style={{fontSize: '18px'}}>₹{farmer.marketRate} / Quintal</p></div> 
