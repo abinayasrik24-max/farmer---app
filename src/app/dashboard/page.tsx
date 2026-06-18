@@ -79,7 +79,21 @@ export default function Dashboard() {
       <div style={{padding: '40px 20px'}}>
         <h1 style={{color: 'white', textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.5)', padding: '15px', borderRadius: '10px'}}>Vanakkam {farmer.name}</h1>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '30px', maxWidth: '1200px', margin: '30px auto'}}>
-          <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '20px', borderRadius: '15px'}}><h3 style={{marginTop: 0, color: '#2e7d32'}}>🌾 Crop</h3><p style={{fontSize: '18px'}}>{farmer.crop}</p><p>📏 Area: {farmer.area}</p></div>
+          <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '20px', borderRadius: '15px'}}><h3 style={{marginTop: 0, color: '#2e7d32'}}>🌾 Crop</h3><p style={{fontSize: '18px'}}>{farmer.crop}</p><p>📏 Area: {farmer.area}</p><button 
+  onClick={() => alert(`Selling ${farmer.crop} at ₹${farmer.marketRate}/Quintal`)}
+  style={{
+    marginTop: '10px', 
+    padding: '8px 16px', 
+    background: '#2e7d32', 
+    color: 'white', 
+    border: 'none', 
+    borderRadius: '5px', 
+    cursor: 'pointer',
+    fontWeight: 'bold'
+  }}
+>
+  Sell Crop
+</button> </div>
           <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '20px', borderRadius: '15px'}}><h3 style={{marginTop: 0, color: '#2e7d32'}}>📈 Market Rate</h3><p style={{fontSize: '18px'}}>₹{farmer.marketRate} / Quintal</p></div>
           <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '20px', borderRadius: '15px'}}><h3 style={{marginTop: 0, color: '#2e7d32'}}>📊 Comparison</h3><p>Prev: ₹{farmer.prevRate}<br/>Current: ₹{farmer.marketRate}<br/>↑ ₹{farmer.marketRate - farmer.prevRate}</p></div>
           <div style={{backgroundColor: 'rgba(255,255,255,0.95)', padding: '20px', borderRadius: '15px'}}><h3 style={{marginTop: 0, color: '#2e7d32'}}>🌤 Weather</h3><p style={{fontSize: '18px'}}>{farmer.weather}</p></div>
