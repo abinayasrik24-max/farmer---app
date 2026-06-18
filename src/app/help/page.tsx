@@ -45,7 +45,7 @@ export default function HelpPage() {
           padding: '60px 50px',
           borderRadius: '20px',
           width: '100%',
-          maxWidth: '750px',
+          maxWidth: '800px',
           boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
         }}>
           
@@ -62,7 +62,7 @@ export default function HelpPage() {
             
             <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
               <p style={{fontWeight: 'bold', color: '#2e7d32', margin: '0 0 8px 0'}}>How do I register?</p>
-              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Click Login → Create Account. Enter your mobile number and complete verification.</p>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Click Login → Create Account. Enter mobile number and complete OTP verification.</p>
             </div>
 
             <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
@@ -73,6 +73,26 @@ export default function HelpPage() {
             <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
               <p style={{fontWeight: 'bold', color: '#2e7d32', margin: '0 0 8px 0'}}>Is the platform free?</p>
               <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Yes, Smart Farmer Portal is completely free for all registered farmers.</p>
+            </div>
+
+            <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
+              <p style={{fontWeight: 'bold', color: '#2e7d32', margin: '0 0 8px 0'}}>How to check market prices?</p>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Click Market Price in navbar. Select crop and location for live prices.</p>
+            </div>
+
+            <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
+              <p style={{fontWeight: 'bold', color: '#2e7d32', margin: '0 0 8px 0'}}>Forgot password?</p>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Click Login → Forgot Password → Enter mobile number → Reset via OTP.</p>
+            </div>
+
+            <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
+              <p style={{fontWeight: 'bold', color: '#2e7d32', margin: '0 0 8px 0'}}>Can I access on mobile?</p>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Yes, the portal is mobile-friendly. Works on all smartphones and browsers.</p>
+            </div>
+
+            <div style={{marginBottom: '20px', padding: '20px', background: '#e8f5e9', borderRadius: '10px'}}>
+              <p style={{fontWeight: 'bold', color: '#2e7d32', margin: '0 0 8px 0'}}>How often is data updated?</p>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Market prices update daily. Weather data updates every 3 hours.</p>
             </div>
           </div>
 
