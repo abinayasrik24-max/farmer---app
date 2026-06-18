@@ -28,7 +28,7 @@ export default function Home() {
             fontSize: '18px',
             fontWeight: 'bold'
           }}
-            Login →
+            Login
           </Link>
         </div>
       </div>
