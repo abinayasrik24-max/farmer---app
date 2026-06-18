@@ -1,79 +1,42 @@
-'use client';
-import { useEffect, useState } from 'react';
-
 export default function MarketPage() {
-  const [rates, setRates] = useState<any[]>([]);
-  const [filteredRates, setFilteredRates] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState('');
-
-  useEffect(() => {
-    fetch('/api/market')
-   .then(res => res.json())
-   .then(data => {
-        setRates(Array.isArray(data)? data : []);
-        setFilteredRates(Array.isArray(data)? data : []);
-        setLoading(false);
-      })
-   .catch(() => {
-        setRates([]);
-        setFilteredRates([]);
-        setLoading(false);
-    });
-  }, []);
-
-  useEffect(() => {
-    const filtered = rates.filter(item =>
-      item.commodity?.toLowerCase().includes(search.toLowerCase()) ||
-      item.variety?.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredRates(filtered);
-  }, [search, rates]);
-
-  if (loading) return <div className="text-center p-20 text-xl">Loading live rates... 🌾</div>;
+  const crops = [
+    { name: 'Paddy', rate: '₹2400', change: '+2.5%', color: 'green' },
+    { name: 'Tomato', rate: '₹45', change: '-5%', color: 'red' },
+    { name: 'Onion', rate: '₹60', change: '+8%', color: 'green' },
+    { name: 'Brinjal', rate: '₹35', change: '+1%', color: 'green' },
+    { name: 'Cotton', rate: '₹7200', change: '+3%', color: 'green' },
+    { name: 'Sugarcane', rate: '₹3400', change: '0%', color: 'gray' },
+    { name: 'Maize', rate: '₹2100', change: '+4%', color: 'green' },
+    { name: 'Groundnut', rate: '₹5800', change: '-2%', color: 'red' },
+    { name: 'Banana', rate: '₹28', change: '+6%', color: 'green' },
+    { name: 'Coconut', rate: '₹35', change: '+1.5%', color: 'green' },
+  ]
 
   return (
-    <div className="min-h-screen bg-green-50 p-6">
-      <h1 className="text-3xl font-bold text-green-800 mb-6 text-center">🌾 Live Market Rates - Coimbatore Mandi</h1>
-
-      <div className="max-w-4xl mx-auto mb-6">
-        <input
-          type="text"
-          placeholder="🔍 Search crop... Tomato, Onion, Paddy..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full p-4 rounded-xl border-2 border-green-300 focus:border-green-600 outline-none text-lg shadow-md"
-        />
+    <div style={{padding: '40px', maxWidth: '800px', margin: '0 auto'}}>
+      <h1 style={{color: '#2e7d32'}}>Market Price - Coimbatore Mandi</h1>
+      <p style={{color: '#666'}}>Last updated: {new Date().toLocaleString('en-IN')}</p>
+      
+      <div style={{marginTop: '30px'}}>
+        {crops.map(crop => (
+          <div key={crop.name} style={{
+            background: 'white', 
+            padding: '20px', 
+            margin: '15px 0', 
+            borderRadius: '10px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+          }}>
+            <h3 style={{margin: 0}}>{crop.name}</h3>
+            <div style={{textAlign: 'right'}}>
+              <h2 style={{margin: 0}}>{crop.rate}/Quintal</h2>
+              <span style={{color: crop.color, fontWeight: 'bold'}}>{crop.change}</span>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-x-auto">
-        <table className="w-full">
-          <thead className="bg-green-700 text-white">
-            <tr>
-              <th className="p-4 text-left">Crop</th>
-              <th className="p-4 text-left">Variety</th>
-              <th className="p-4 text-left">Rate /Quintal</th>
-              <th className="p-4 text-left">Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredRates.length === 0? (
-              <tr><td colSpan={4} className="p-6 text-center text-gray-500">No crops found 🔍</td></tr>
-            ) : filteredRates.map((item, i) => (
-              <tr key={i} className="border-b hover:bg-green-50">
-                <td className="p-4 font-semibold">{item.commodity}</td>
-                <td className="p-4">{item.variety}</td>
-                <td className="p-4 text-green-700 font-bold">₹{item.modal_price}</td>
-                <td className="p-4 text-gray-600">{item.arrival_date}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <p className="text-center text-gray-500 mt-4 text-sm">
-        Showing {filteredRates.length} crops | Last updated: {new Date().toLocaleString('en-IN')}
-      </p>
     </div>
-  );
+  )
 }
