@@ -11,7 +11,6 @@ export default function HomePage() {
       fontFamily: 'Arial, sans-serif'
     }}>
       
-      {/* Navbar - Green theme */}
       <nav style={{
         background: '#2e7d32',
         padding: '15px 50px',
@@ -21,16 +20,15 @@ export default function HomePage() {
         color: 'white',
         fontWeight: 'bold'
       }}>
-        <h1 style={{fontSize: '24px', margin: 0}}>🌾 Smart Farmer</h1>
+        <h1 style={{fontSize: '24px', margin: 0}}>Smart Farmer Portal</h1>
         <div style={{display: 'flex', gap: '30px'}}>
           <Link href="/" style={{color: 'white', textDecoration: 'none'}}>Home</Link>
           <Link href="/about" style={{color: 'white', textDecoration: 'none'}}>About</Link>
-          <Link href="/market-price" style={{color: 'white', textDecoration: 'none'}}>Market Price</Link>
+          <Link href="/market-price" style={{color: 'white', textDecoration: 'none'}}>Market</Link>
           <Link href="/login" style={{color: 'white', textDecoration: 'none'}}>Login</Link>
         </div>
       </nav>
 
-      {/* Main content - White card center la */}
       <div style={{
         display: 'flex',
         justifyContent: 'center',
@@ -50,12 +48,11 @@ export default function HomePage() {
         }}>
           
           <h1 style={{color: '#2e7d32', fontSize: '42px', marginBottom: '20px'}}>
-            Welcome to Smart Farmer 🌾
+            Smart Farmer Portal
           </h1>
           
           <p style={{fontSize: '18px', color: '#555', marginBottom: '40px', lineHeight: '1.6'}}>
-            Unoda crop details, market price, weather, income, expense ellam orae idathula paaru. 
-            10 farmers ku personal dashboard ready ah iruku.
+            Manage crops, track market prices, check weather, and monitor income and expenses in one place.
           </p>
 
           <div style={{
@@ -66,11 +63,11 @@ export default function HomePage() {
           }}>
             <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
               <div style={{fontSize: '30px', marginBottom: '5px'}}>🌾</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Crop Details</div>
+              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Crops</div>
             </div>
             <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
               <div style={{fontSize: '30px', marginBottom: '5px'}}>💰</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Market Rate</div>
+              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Market</div>
             </div>
             <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
               <div style={{fontSize: '30px', marginBottom: '5px'}}>🌤️</div>
@@ -78,7 +75,7 @@ export default function HomePage() {
             </div>
             <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
               <div style={{fontSize: '30px', marginBottom: '5px'}}>📊</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Profit</div>
+              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Analytics</div>
             </div>
           </div>
 
@@ -93,7 +90,7 @@ export default function HomePage() {
             display: 'inline-block',
             cursor: 'pointer'
           }}>
-            Farmer Login →
+            Login →
           </Link>
 
         </div>
