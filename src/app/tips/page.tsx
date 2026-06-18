@@ -45,7 +45,7 @@ export default function TipsPage() {
           padding: '60px 50px',
           borderRadius: '20px',
           width: '100%',
-          maxWidth: '800px',
+          maxWidth: '900px',
           boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
         }}>
           
@@ -54,29 +54,51 @@ export default function TipsPage() {
           </h1>
           
           <p style={{fontSize: '16px', color: '#555', marginBottom: '30px', textAlign: 'center'}}>
-            Expert guidance for better crop yield and sustainable farming practices.
+            Expert guidance for better crop yield and sustainable farming.
           </p>
 
-          <div style={{display: 'grid', gap: '20px'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '20px'}}>
+            
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '10px'}}>Soil Health Management</h3>
-              <p style={{color: '#555', margin: 0}}>Test soil pH and nutrient levels before planting. Use organic compost to improve soil fertility.</p>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Soil Health Management</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Test soil pH and nutrients before planting. Use organic compost to improve fertility.</p>
             </div>
 
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '10px'}}>Water Conservation</h3>
-              <p style={{color: '#555', margin: 0}}>Implement drip irrigation to reduce water usage. Schedule irrigation during early morning hours.</p>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Water Conservation</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Use drip irrigation. Schedule watering during early morning to reduce evaporation.</p>
             </div>
 
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '10px'}}>Pest Control</h3>
-              <p style={{color: '#555', margin: 0}}>Use integrated pest management. Introduce natural predators instead of chemical pesticides.</p>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Pest Control</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Apply integrated pest management. Use natural predators instead of chemicals.</p>
             </div>
 
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '10px'}}>Crop Rotation</h3>
-              <p style={{color: '#555', margin: 0}}>Rotate crops seasonally to maintain soil nutrients and prevent disease buildup.</p>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Crop Rotation</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Rotate crops seasonally to maintain soil nutrients and prevent disease buildup.</p>
             </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Seed Selection</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Choose certified seeds suitable for local climate. Check germination rate before sowing.</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Fertilizer Management</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Apply fertilizers based on soil test results. Avoid overuse to prevent soil damage.</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Weather Monitoring</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Track weather forecasts. Protect crops from unexpected rain or heat waves.</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '10px', fontSize: '18px'}}>Post-Harvest Storage</h3>
+              <p style={{color: '#555', margin: 0, fontSize: '15px'}}>Store grains in dry, ventilated spaces. Use airtight containers to prevent moisture.</p>
+            </div>
+
           </div>
 
         </div>
