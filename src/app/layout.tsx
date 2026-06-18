@@ -22,9 +22,9 @@ export default function RootLayout({
           <Link href="/about" style={{color: "white", textDecoration: "none", fontSize: "16px"}}>About</Link>
           <Link href="/market" style={{color: "white", textDecoration: "none", fontSize: "16px"}}>Market Price</Link>
           <Link href="/login" style={{color: "white", textDecoration: "none", fontSize: "16px"}}>Login</Link>
-          <Link href="/tips" style={{color: "yellow", textDecoration: "none", fontWeight: "bold"}}>Agri Tips</Link>
-          <Link href="/schemes" style={{color: "yellow", textDecoration: "none", fontWeight: "bold"}}>Schemes</Link>
-<Link href="/help" style={{color: "yellow", textDecoration: "none", fontWeight: "bold"}}>Help</Link>
+          <Link href="/tips" style={{color: "white", textDecoration: "none", fontWeight: "bold"}}>Agri Tips</Link>
+          <Link href="/schemes" style={{color: "white", textDecoration: "none", fontWeight: "bold"}}>Schemes</Link>
+<Link href="/help" style={{color: "white", textDecoration: "none", fontWeight: "bold"}}>Help</Link>
           
           
         </nav>
