@@ -45,7 +45,7 @@ export default function SchemesPage() {
           padding: '60px 50px',
           borderRadius: '20px',
           width: '100%',
-          maxWidth: '900px',
+          maxWidth: '950px',
           boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
         }}>
           
@@ -54,33 +54,57 @@ export default function SchemesPage() {
           </h1>
           
           <p style={{fontSize: '16px', color: '#555', marginBottom: '30px', textAlign: 'center'}}>
-            Financial support and subsidy programs for farmers in India.
+            Financial support and subsidy programs for Indian farmers.
           </p>
 
-          <div style={{display: 'grid', gap: '20px'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '20px'}}>
             
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '8px'}}>PM-KISAN Scheme</h3>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>PM-KISAN Scheme</h3>
               <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Direct income support of ₹6,000 per year in 3 installments.</p>
               <p style={{color: '#777', fontSize: '13px', margin: 0}}>Eligibility: Landholding farmer families</p>
             </div>
 
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '8px'}}>PM Fasal Bima Yojana</h3>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>PM Fasal Bima Yojana</h3>
               <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Crop insurance against natural calamities and pests.</p>
               <p style={{color: '#777', fontSize: '13px', margin: 0}}>Coverage: All food and oilseed crops</p>
             </div>
 
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '8px'}}>Kisan Credit Card</h3>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>Kisan Credit Card</h3>
               <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Low interest loans up to ₹3 lakh for agricultural needs.</p>
               <p style={{color: '#777', fontSize: '13px', margin: 0}}>Interest: 4% with timely repayment</p>
             </div>
 
             <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
-              <h3 style={{color: '#2e7d32', marginBottom: '8px'}}>Soil Health Card</h3>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>Soil Health Card</h3>
               <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Free soil testing and nutrient recommendations every 2 years.</p>
               <p style={{color: '#777', fontSize: '13px', margin: 0}}>Benefit: Optimize fertilizer usage</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>PM-KUSUM Scheme</h3>
+              <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Solar pumps and grid-connected solar power plants for farmers.</p>
+              <p style={{color: '#777', fontSize: '13px', margin: 0}}>Subsidy: Up to 60% of project cost</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>Rashtriya Krishi Vikas Yojana</h3>
+              <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Funding for agriculture infrastructure and technology adoption.</p>
+              <p style={{color: '#777', fontSize: '13px', margin: 0}}>Support: State-specific projects</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>Paramparagat Krishi Vikas Yojana</h3>
+              <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Promotion of organic farming and chemical-free agriculture.</p>
+              <p style={{color: '#777', fontSize: '13px', margin: 0}}>Assistance: ₹50,000 per hectare</p>
+            </div>
+
+            <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px', borderLeft: '4px solid #2e7d32'}}>
+              <h3 style={{color: '#2e7d32', marginBottom: '8px', fontSize: '18px'}}>Pradhan Mantri Krishi Sinchai Yojana</h3>
+              <p style={{color: '#555', margin: '0 0 8px 0', fontSize: '15px'}}>Improve water use efficiency through micro-irrigation systems.</p>
+              <p style={{color: '#777', fontSize: '13px', margin: 0}}>Coverage: Drip and sprinkler systems</p>
             </div>
 
           </div>
