@@ -1,34 +1,12 @@
-'use client';
-import Link from 'next/link';
-
 export default function HomePage() {
   return (
     <div style={{
-      backgroundImage: 'url("https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1600")',
+      backgroundImage: 'url("https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=1600")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      minHeight: '100vh',
-      fontFamily: 'Arial, sans-serif'
+      minHeight: '100vh'
     }}>
       
-      <nav style={{
-        background: '#2e7d32',
-        padding: '15px 50px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        color: 'white',
-        fontWeight: 'bold'
-      }}>
-        <h1 style={{fontSize: '24px', margin: 0}}>Smart Farmer Portal</h1>
-        <div style={{display: 'flex', gap: '30px'}}>
-          <Link href="/" style={{color: 'white', textDecoration: 'none'}}>Home</Link>
-          <Link href="/about" style={{color: 'white', textDecoration: 'none'}}>About</Link>
-          <Link href="/market-price" style={{color: 'white', textDecoration: 'none'}}>Market</Link>
-          <Link href="/login" style={{color: 'white', textDecoration: 'none'}}>Login</Link>
-        </div>
-      </nav>
-
       <div style={{
         display: 'flex',
         justifyContent: 'center',
@@ -38,60 +16,60 @@ export default function HomePage() {
       }}>
         
         <div style={{
-          background: 'rgba(255,255,255,0.95)',
+          background: 'rgba(255,255,255,0.97)',
           padding: '60px 50px',
-          borderRadius: '20px',
+          borderRadius: '25px',
           width: '100%',
-          maxWidth: '700px',
-          boxShadow: '0 15px 50px rgba(0,0,0,0.4)',
-          textAlign: 'center'
+          maxWidth: '1000px',
+          boxShadow: '0 20px 60px rgba(0,0,0,0.5)'
         }}>
           
-          <h1 style={{color: '#2e7d32', fontSize: '42px', marginBottom: '20px'}}>
-            Smart Farmer Portal
+          <h1 style={{color: '#2e7d32', fontSize: '48px', marginBottom: '15px', textAlign: 'center'}}>
+            Empower Your Farming
           </h1>
           
-          <p style={{fontSize: '18px', color: '#555', marginBottom: '40px', lineHeight: '1.6'}}>
-            Manage crops, track market prices, check weather, and monitor income and expenses in one place.
+          <p style={{fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '40px', textAlign: 'center'}}>
+            Data-driven tools for modern farmers. Track crops, monitor markets, and maximize your yield.
           </p>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '20px',
-            marginBottom: '40px'
+            marginBottom: '50px'
           }}>
-            <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
-              <div style={{fontSize: '30px', marginBottom: '5px'}}>🌾</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Crops</div>
+            <div style={{textAlign: 'center', padding: '25px', background: '#e8f5e9', borderRadius: '15px'}}>
+              <h2 style={{color: '#2e7d32', fontSize: '36px', margin: '0 0 8px 0'}}>10K+</h2>
+              <p style={{color: '#555', margin: 0}}>Active Farmers</p>
             </div>
-            <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
-              <div style={{fontSize: '30px', marginBottom: '5px'}}>💰</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Market</div>
+            <div style={{textAlign: 'center', padding: '25px', background: '#e8f5e9', borderRadius: '15px'}}>
+              <h2 style={{color: '#2e7d32', fontSize: '36px', margin: '0 0 8px 0'}}>500+</h2>
+              <p style={{color: '#555', margin: 0}}>Crop Varieties</p>
             </div>
-            <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
-              <div style={{fontSize: '30px', marginBottom: '5px'}}>🌤️</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Weather</div>
+            <div style={{textAlign: 'center', padding: '25px', background: '#e8f5e9', borderRadius: '15px'}}>
+              <h2 style={{color: '#2e7d32', fontSize: '36px', margin: '0 0 8px 0'}}>24/7</h2>
+              <p style={{color: '#555', margin: 0}}>Weather Updates</p>
             </div>
-            <div style={{padding: '20px', background: '#e8f5e9', borderRadius: '12px'}}>
-              <div style={{fontSize: '30px', marginBottom: '5px'}}>📊</div>
-              <div style={{fontWeight: 'bold', color: '#2e7d32'}}>Analytics</div>
+            <div style={{textAlign: 'center', padding: '25px', background: '#e8f5e9', borderRadius: '15px'}}>
+              <h2 style={{color: '#2e7d32', fontSize: '36px', margin: '0 0 8px 0'}}>100%</h2>
+              <p style={{color: '#555', margin: 0}}>Free Access</p>
             </div>
           </div>
 
-          <Link href="/login" style={{
-            background: '#2e7d32',
-            color: 'white',
-            padding: '18px 50px',
-            borderRadius: '10px',
-            textDecoration: 'none',
-            fontSize: '18px',
-            fontWeight: 'bold',
-            display: 'inline-block',
-            cursor: 'pointer'
-          }}>
-            Login →
-          </Link>
+          <div style={{textAlign: 'center'}}>
+            <a href="/login" style={{
+              display: 'inline-block',
+              padding: '16px 45px',
+              background: '#2e7d32',
+              color: 'white',
+              textDecoration: 'none',
+              borderRadius: '30px',
+              fontSize: '18px',
+              fontWeight: 'bold'
+            }}>
+              Get Started Now
+            </a>
+          </div>
 
         </div>
       </div>
