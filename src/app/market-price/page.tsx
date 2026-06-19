@@ -3,25 +3,25 @@ import { useState } from 'react';
 
 const priceData = [
   // Cereals - Paddy
-  { crop: 'Paddy/Nel', market: 'Thanjavur', today: 2200, yesterday: 2150, weekAvg: 2100, type: 'Cereal' },
+  { crop: 'Paddy', market: 'Thanjavur', today: 2200, yesterday: 2150, weekAvg: 2100, type: 'Cereal' },
   { crop: 'Rice Ponni', market: 'Thanjavur', today: 48, yesterday: 46, weekAvg: 45, type: 'Cereal' },
   { crop: 'Rice BPT', market: 'Coimbatore', today: 42, yesterday: 40, weekAvg: 41, type: 'Cereal' },
   
-  // Vegetables - More
+  // Vegetables - English Only
   { crop: 'Tomato', market: 'Coimbatore', today: 35, yesterday: 32, weekAvg: 31, type: 'Vegetable' },
-  { crop: 'Onion/Vengayam', market: 'Madurai', today: 28, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
-  { crop: 'Brinjal/Kathirikai', market: 'Tirupur', today: 22, yesterday: 22, weekAvg: 21, type: 'Vegetable' },
-  { crop: 'Potato/Uruulai', market: 'Ooty', today: 25, yesterday: 24, weekAvg: 23, type: 'Vegetable' },
-  { crop: 'Carrot/Kaarai', market: 'Ooty', today: 40, yesterday: 38, weekAvg: 37, type: 'Vegetable' },
-  { crop: 'Cabbage/Mutai', market: 'Coimbatore', today: 18, yesterday: 20, weekAvg: 22, type: 'Vegetable' },
+  { crop: 'Onion', market: 'Madurai', today: 28, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
+  { crop: 'Brinjal', market: 'Tirupur', today: 22, yesterday: 22, weekAvg: 21, type: 'Vegetable' },
+  { crop: 'Potato', market: 'Ooty', today: 25, yesterday: 24, weekAvg: 23, type: 'Vegetable' },
+  { crop: 'Carrot', market: 'Ooty', today: 40, yesterday: 38, weekAvg: 37, type: 'Vegetable' },
+  { crop: 'Cabbage', market: 'Coimbatore', today: 18, yesterday: 20, weekAvg: 22, type: 'Vegetable' },
   { crop: 'Cauliflower', market: 'Coimbatore', today: 30, yesterday: 28, weekAvg: 27, type: 'Vegetable' },
-  { crop: 'Bhindi/Vendakai', market: 'Tirupur', today: 32, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
-  { crop: 'Drumstick/Murungai', market: 'Madurai', today: 80, yesterday: 75, weekAvg: 70, type: 'Vegetable' },
+  { crop: 'Okra', market: 'Tirupur', today: 32, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
+  { crop: 'Drumstick', market: 'Madurai', today: 80, yesterday: 75, weekAvg: 70, type: 'Vegetable' },
   { crop: 'Beans', market: 'Ooty', today: 45, yesterday: 42, weekAvg: 40, type: 'Vegetable' },
   
-  // Fruits
-  { crop: 'Banana/Vazhai', market: 'Theni', today: 45, yesterday: 48, weekAvg: 47, type: 'Fruit' },
-  { crop: 'Coconut/Thengai', market: 'Pollachi', today: 35, yesterday: 33, weekAvg: 32, type: 'Fruit' },
+  // Fruits - English Only
+  { crop: 'Banana', market: 'Theni', today: 45, yesterday: 48, weekAvg: 47, type: 'Fruit' },
+  { crop: 'Coconut', market: 'Pollachi', today: 35, yesterday: 33, weekAvg: 32, type: 'Fruit' },
 ];
 
 export default function MarketPricePage() {
@@ -36,7 +36,7 @@ export default function MarketPricePage() {
 
   return (
     <div style={{
-      background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%)', // Light green theme only
+      background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%)',
       minHeight: '100vh',
       padding: '40px 20px'
     }}>
@@ -57,7 +57,6 @@ export default function MarketPricePage() {
           Last updated: Today 8:00 AM | Source: AGMARKNET + Local Mandi
         </p>
 
-        {/* Filter */}
         <div style={{display: 'flex', gap: '15px', marginBottom: '30px', flexWrap: 'wrap'}}>
           <select value={cropType} onChange={(e) => setCropType(e.target.value)} 
             style={{padding: '12px', borderRadius: '8px', border: '2px solid #2e7d32', flex: 1, minWidth: '150px', fontSize: '16px'}}>
@@ -79,7 +78,6 @@ export default function MarketPricePage() {
           </select>
         </div>
 
-        {/* Price Comparison Table */}
         <div style={{overflowX: 'auto', marginBottom: '40px'}}>
           <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '15px'}}>
             <thead>
@@ -120,7 +118,6 @@ export default function MarketPricePage() {
           </table>
         </div>
 
-        {/* 7 Day Trend Chart */}
         <div style={{marginBottom: '40px'}}>
           <h3 style={{color: '#2e7d32', marginBottom: '15px'}}>7 Day Trend - Tomato Coimbatore</h3>
           <div style={{display: 'flex', gap: '8px', alignItems: 'flex-end', height: '120px', paddingBottom: '20px'}}>
@@ -140,7 +137,6 @@ export default function MarketPricePage() {
           </div>
         </div>
 
-        {/* Farmer Tip */}
         <div style={{
           padding: '20px',
           background: '#e8f5e9',
