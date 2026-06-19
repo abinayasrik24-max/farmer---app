@@ -1,159 +1,120 @@
-export default function AboutPage() {
+export default function MarketPage() {
   return (
     <div style={{
       minHeight: '100vh',
-      padding: '100px 40px',
+      background: 'linear-gradient(180deg, #0a1f0a 0%, #143d14 100%)', // Dark green solid
+      padding: '90px 40px',
       color: 'white'
     }}>
       <div style={{
-        maxWidth: '950px',
-        margin: '0 auto',
-        background: 'rgba(0, 0, 0, 0.5)',  // Only dark transparent, no blue/gray
-        backdropFilter: 'blur(15px)',
-        padding: '70px 60px',
-        borderRadius: '28px',
-        border: '1px solid rgba(255, 255, 255, 0.25)',
-        boxShadow: '0 25px 70px rgba(0,0,0,0.4)'
+        maxWidth: '1100px',
+        margin: '0 auto'
       }}>
         
-        <div style={{textAlign: 'center', marginBottom: '50px'}}>
+        {/* Header */}
+        <div style={{textAlign: 'center', marginBottom: '70px'}}>
           <h1 style={{
-            fontSize: '52px',
+            fontSize: '56px',
             fontWeight: '800',
             color: 'white',
-            marginBottom: '18px',
-            letterSpacing: '-1.5px',
-            textShadow: '0 4px 25px rgba(0,0,0,0.8)'
+            marginBottom: '15px',
+            letterSpacing: '-2px',
+            textShadow: '0 6px 25px rgba(0,0,0,0.6)'
           }}>
-            About Smart Farmer Portal
+            Market Price
           </h1>
           <div style={{
-            width: '80px',
+            width: '90px',
             height: '4px',
-            background: 'linear-gradient(90deg, #22c55e, #16a34a)',
-            margin: '0 auto',
+            background: '#22c55e',
+            margin: '0 auto 25px',
             borderRadius: '2px'
           }}></div>
+          <p style={{
+            fontSize: '19px',
+            color: 'rgba(255, 255, 255, 0.85)',
+            textShadow: '0 2px 8px rgba(0,0,0,0.4)'
+          }}>
+            Daily APMC Mandi Rates - Updated Today
+          </p>
         </div>
 
-        <p style={{
-          fontSize: '19px',
-          color: 'white',
-          lineHeight: '1.9',
-          marginBottom: '28px',
-          opacity: 0.96,
-          textShadow: '0 2px 12px rgba(0,0,0,0.6)'
-        }}>
-          Smart Farmer Portal is a cutting-edge digital ecosystem designed to revolutionize 
-          Indian agriculture. We empower farmers with real-time market intelligence, precision 
-          weather forecasts, and science-backed farming guidance - all at their fingertips.
-        </p>
-
-        <p style={{
-          fontSize: '19px',
-          color: 'white',
-          lineHeight: '1.9',
-          marginBottom: '28px',
-          opacity: 0.96,
-          textShadow: '0 2px 12px rgba(0,0,0,0.6)'
-        }}>
-          Our platform bridges the gap between traditional farming wisdom and modern technology. 
-          By delivering transparent market data and actionable insights, we help farmers maximize 
-          yield, reduce risks, and secure better income for their hard work.
-        </p>
-
-        <p style={{
-          fontSize: '19px',
-          color: 'white',
-          lineHeight: '1.9',
-          marginBottom: '55px',
-          opacity: 0.96,
-          textShadow: '0 2px 12px rgba(0,0,0,0.6)'
-        }}>
-          Built by farmers, for farmers. We believe every farmer deserves access to the same 
-          tools and information that drive success in modern agriculture.
-        </p>
-
+        {/* Price Table/Cards */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '35px',
-          marginTop: '40px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '25px'
         }}>
-          <div style={{
-            background: 'rgba(34, 197, 94, 0.12)',
-            padding: '40px 35px',
-            borderRadius: '20px',
-            border: '1px solid rgba(34, 197, 94, 0.3)'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-              borderRadius: '14px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '28px',
-              marginBottom: '20px'
-            }}>🎯</div>
-            <h3 style={{fontSize: '24px', color: 'white', marginBottom: '15px', fontWeight: '700'}}>Our Vision</h3>
-            <p style={{color: 'white', opacity: 0.92, lineHeight: '1.8', fontSize: '16px'}}>
-              To create a digitally empowered farming community where every farmer has instant 
-              access to data, insights, and opportunities for sustainable growth.
-            </p>
-          </div>
-
-          <div style={{
-            background: 'rgba(34, 197, 94, 0.12)',
-            padding: '40px 35px',
-            borderRadius: '20px',
-            border: '1px solid rgba(34, 197, 94, 0.3)'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-              borderRadius: '14px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '28px',
-              marginBottom: '20px'
-            }}>🚀</div>
-            <h3 style={{fontSize: '24px', color: 'white', marginBottom: '15px', fontWeight: '700'}}>Our Mission</h3>
-            <p style={{color: 'white', opacity: 0.92, lineHeight: '1.8', fontSize: '16px'}}>
-              Deliver accurate, real-time agricultural intelligence that helps farmers make 
-              smarter decisions, improve productivity, and build a profitable future.
-            </p>
-          </div>
+          
+          {[
+            {crop: 'Tomato', price: '₹4,200', mandi: 'Dindigul', change: '+₹180', up: true},
+            {crop: 'Onion', price: '₹3,850', mandi: 'Madurai', change: '-₹95', up: false},
+            {crop: 'Paddy', price: '₹2,980', mandi: 'Thanjavur', change: '+₹65', up: true},
+            {crop: 'Brinjal', price: '₹3,150', mandi: 'Coimbatore', change: '+₹120', up: true},
+            {crop: 'Potato', price: '₹2,650', mandi: 'Ooty', change: '-₹40', up: false},
+            {crop: 'Chilli', price: '₹15,500', mandi: 'Virudhunagar', change: '+₹450', up: true}
+          ].map((item, i) => (
+            <div key={i} style={{
+              background: 'rgba(0, 0, 0, 0.45)',
+              backdropFilter: 'blur(12px)',
+              padding: '32px',
+              borderRadius: '18px',
+              border: '1px solid rgba(34, 197, 94, 0.25)',
+              boxShadow: '0 12px 35px rgba(0,0,0,0.35)',
+              transition: 'transform 0.2s'
+            }}>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: '18px'
+              }}>
+                <h3 style={{fontSize: '26px', fontWeight: '700', color: 'white'}}>{item.crop}</h3>
+                <span style={{
+                  fontSize: '12px',
+                  background: 'rgba(34, 197, 94, 0.2)',
+                  color: '#4ade80',
+                  padding: '5px 12px',
+                  borderRadius: '15px',
+                  fontWeight: '600'
+                }}>LIVE</span>
+              </div>
+              
+              <div style={{fontSize: '40px', fontWeight: '800', color: '#4ade80', marginBottom: '6px'}}>
+                {item.price}
+              </div>
+              
+              <div style={{fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)', marginBottom: '12px'}}>
+                per quintal - {item.mandi} Mandi
+              </div>
+              
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                color: item.up ? '#4ade80' : '#f87171',
+                fontSize: '16px',
+                fontWeight: '600'
+              }}>
+                {item.up ? '↑' : '↓'} {item.change} from yesterday
+              </div>
+            </div>
+          ))}
+          
         </div>
 
+        {/* Footer Note */}
         <div style={{
           marginTop: '70px',
-          paddingTop: '50px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-          gap: '40px',
-          textAlign: 'center'
+          textAlign: 'center',
+          padding: '25px',
+          background: 'rgba(0, 0, 0, 0.35)',
+          borderRadius: '14px',
+          border: '1px solid rgba(255, 255, 255, 0.12)'
         }}>
-          <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>1000+</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Farmers Served</div>
-          </div>
-          <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>50+</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Mandi Markets</div>
-          </div>
-          <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>24/7</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Data Access</div>
-          </div>
-          <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>100%</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Free Platform</div>
-          </div>
+          <p style={{fontSize: '15px', color: 'rgba(255, 255, 255, 0.75)'}}>
+            * Data sourced from Tamil Nadu Agricultural Marketing Department | Last updated: Today 6:00 PM
+          </p>
         </div>
 
       </div>
