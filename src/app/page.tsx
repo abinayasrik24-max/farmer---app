@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <div style={{
       minHeight: '100vh',
-      backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000&auto=format&fit=crop)',
+      backgroundImage: 'url(https://images.unsplash.com/photo-1444858291049-58f756a3bdd6?q=80&w=2000&auto=format&fit=crop)',
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
       backgroundAttachment: 'fixed',
@@ -10,14 +10,14 @@ export default function HomePage() {
       fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif'
     }}>
       
-      {/* Subtle dark overlay - white text clear ah theriya */}
+      {/* Light green overlay */}
       <div style={{
-        background: 'rgba(0, 0, 0, 0.45)',
+        background: 'linear-gradient(135deg, rgba(20,83,45,0.75) 0%, rgba(34,139,34,0.65) 100%)',
         minHeight: '100vh',
         padding: '0'
       }}>
 
-        {/* Hero Section - Full White Text */}
+        {/* Hero Section - Clean, No Buttons */}
         <section style={{
           display: 'flex',
           flexDirection: 'column',
@@ -28,27 +28,27 @@ export default function HomePage() {
           padding: '80px 40px'
         }}>
           <div style={{
-            maxWidth: '900px',
+            maxWidth: '850px',
             width: '100%'
           }}>
             <h1 style={{
-              fontSize: '72px',
+              fontSize: '70px',
               fontWeight: '800',
               color: 'white',
-              marginBottom: '30px',
+              marginBottom: '28px',
               letterSpacing: '-2px',
               lineHeight: '1.1',
-              textShadow: '0 4px 20px rgba(0,0,0,0.7)'
+              textShadow: '0 4px 25px rgba(0,0,0,0.6)'
             }}>
               Smart Agriculture Intelligence
             </h1>
             <p style={{
               fontSize: '24px',
-              color: 'white',
-              lineHeight: '1.8',
+              color: '#f0fdf4',
+              lineHeight: '1.7',
               fontWeight: '400',
-              textShadow: '0 2px 15px rgba(0,0,0,0.6)',
-              maxWidth: '750px',
+              textShadow: '0 2px 12px rgba(0,0,0,0.5)',
+              maxWidth: '700px',
               margin: '0 auto'
             }}>
               Real-time market data, weather insights, and farming intelligence 
@@ -57,30 +57,28 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Features Section - Dark transparent */}
+        {/* Features Section */}
         <section style={{
           padding: '100px 40px',
-          background: 'rgba(0, 0, 0, 0.7)',
-          backdropFilter: 'blur(10px)',
+          background: 'rgba(20, 83, 45, 0.85)',
+          backdropFilter: 'blur(8px)',
           borderTop: '1px solid rgba(255, 255, 255, 0.2)'
         }}>
           <div style={{maxWidth: '1100px', margin: '0 auto'}}>
             <h2 style={{
-              fontSize: '46px',
+              fontSize: '44px',
               fontWeight: '700',
               color: 'white',
               textAlign: 'center',
-              marginBottom: '20px',
-              letterSpacing: '-1px'
+              marginBottom: '20px'
             }}>
               Built for Farmers
             </h2>
             <p style={{
-              fontSize: '20px',
-              color: 'white',
+              fontSize: '19px',
+              color: '#dcfce7',
               textAlign: 'center',
-              marginBottom: '70px',
-              opacity: 0.9
+              marginBottom: '70px'
             }}>
               Technology-driven solutions for modern agriculture
             </p>
@@ -102,8 +100,8 @@ export default function HomePage() {
                   justifyContent: 'center',
                   fontSize: '32px'
                 }}>📊</div>
-                <h4 style={{fontSize: '21px', fontWeight: '600', color: 'white', marginBottom: '14px'}}>Market Data</h4>
-                <p style={{color: 'white', lineHeight: '1.8', fontSize: '16px', opacity: 0.9}}>
+                <h4 style={{fontSize: '20px', fontWeight: '600', color: 'white', marginBottom: '12px'}}>Market Data</h4>
+                <p style={{color: '#dcfce7', lineHeight: '1.7', fontSize: '15px'}}>
                   Access daily APMC mandi prices and historical trends across Tamil Nadu markets.
                 </p>
               </div>
@@ -120,8 +118,8 @@ export default function HomePage() {
                   justifyContent: 'center',
                   fontSize: '32px'
                 }}>🌦️</div>
-                <h4 style={{fontSize: '21px', fontWeight: '600', color: 'white', marginBottom: '14px'}}>Weather Insights</h4>
-                <p style={{color: 'white', lineHeight: '1.8', fontSize: '16px', opacity: 0.9}}>
+                <h4 style={{fontSize: '20px', fontWeight: '600', color: 'white', marginBottom: '12px'}}>Weather Insights</h4>
+                <p style={{color: '#dcfce7', lineHeight: '1.7', fontSize: '15px'}}>
                   Accurate forecasts and alerts to plan sowing, irrigation, and harvesting schedules.
                 </p>
               </div>
@@ -138,8 +136,8 @@ export default function HomePage() {
                   justifyContent: 'center',
                   fontSize: '32px'
                 }}>🏛️</div>
-                <h4 style={{fontSize: '21px', fontWeight: '600', color: 'white', marginBottom: '14px'}}>Government Schemes</h4>
-                <p style={{color: 'white', lineHeight: '1.8', fontSize: '16px', opacity: 0.9}}>
+                <h4 style={{fontSize: '20px', fontWeight: '600', color: 'white', marginBottom: '12px'}}>Government Schemes</h4>
+                <p style={{color: '#dcfce7', lineHeight: '1.7', fontSize: '15px'}}>
                   Complete information on PM-Kisan, PMFBY, and state subsidy programs.
                 </p>
               </div>
@@ -156,8 +154,8 @@ export default function HomePage() {
                   justifyContent: 'center',
                   fontSize: '32px'
                 }}>💡</div>
-                <h4 style={{fontSize: '21px', fontWeight: '600', color: 'white', marginBottom: '14px'}}>Expert Guidance</h4>
-                <p style={{color: 'white', lineHeight: '1.8', fontSize: '16px', opacity: 0.9}}>
+                <h4 style={{fontSize: '20px', fontWeight: '600', color: 'white', marginBottom: '12px'}}>Expert Guidance</h4>
+                <p style={{color: '#dcfce7', lineHeight: '1.7', fontSize: '15px'}}>
                   Scientific farming practices and crop management tips from agricultural experts.
                 </p>
               </div>
@@ -169,10 +167,9 @@ export default function HomePage() {
         <footer style={{
           padding: '50px 40px',
           textAlign: 'center',
-          color: 'white',
+          color: '#bbf7d0',
           fontSize: '15px',
-          background: 'rgba(0, 0, 0, 0.85)',
-          opacity: 0.9
+          background: 'rgba(20, 83, 45, 0.95)'
         }}>
           © 2026 Smart Farmer Portal. Empowering agriculture through technology.
         </footer>
