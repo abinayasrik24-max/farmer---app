@@ -1,61 +1,85 @@
 export default function TipsPage() {
+  const tips = [
+    {
+      title: '1. Soil Testing',
+      desc: 'Test soil every 6 months. Use Soil Health Card recommendations for fertilizer application. Right nutrients = better yield.'
+    },
+    {
+      title: '2. Water Management', 
+      desc: 'Use drip irrigation for water efficiency. Water crops early morning or evening to reduce evaporation loss.'
+    },
+    {
+      title: '3. Seed Selection',
+      desc: 'Use certified seeds only. Treat seeds before sowing to prevent disease and improve germination rate.'
+    },
+    {
+      title: '4. Integrated Pest Management',
+      desc: 'Use neem oil and pheromone traps. Avoid excess pesticide. Protect beneficial insects like ladybirds.'
+    },
+    {
+      title: '5. Crop Rotation',
+      desc: 'Change crops each season. Paddy → Pulses → Vegetables rotation keeps soil healthy and fertile.'
+    },
+    {
+      title: '6. Weather Monitoring',
+      desc: 'Check IMD weather forecast daily. Prepare for rain and ensure proper drainage to avoid waterlogging.'
+    }
+  ];
+
   return (
     <div style={{
-      backgroundImage: 'url("https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=1600")',
-      backgroundSize: 'cover',
-      minHeight: '100vh'
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
+      padding: '50px 20px'
     }}>
       
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: 'calc(100vh - 60px)',
-        padding: '40px 20px'
-      }}>
+      <div style={{maxWidth: '900px', margin: '0 auto'}}>
         
-        <div style={{
-          background: 'rgba(255,255,255,0.95)',
-          padding: '60px 50px',
-          borderRadius: '20px',
-          width: '100%',
-          maxWidth: '900px',
-          boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
+        <h1 style={{
+          textAlign: 'center',
+          color: '#1b5e20',
+          fontSize: '36px',
+          fontWeight: '800',
+          marginBottom: '40px'
         }}>
-          
-          <h1 style={{color: '#2e7d32', fontSize: '40px', marginBottom: '30px', textAlign: 'center'}}>
-            Agricultural Tips
-          </h1>
-          
-          <div style={{marginBottom: '25px', padding: '25px', background: '#e8f5e9', borderRadius: '12px'}}>
-            <h3 style={{color: '#2e7d32', fontSize: '20px', marginBottom: '10px'}}>1. Soil Testing</h3>
-            <p style={{color: '#555', fontSize: '16px', lineHeight: '1.7', margin: 0}}>
-              Test soil every 6 months. Use Soil Health Card recommendations for fertilizer application. Right nutrients = better yield.
-            </p>
-          </div>
+          Agricultural Tips
+        </h1>
 
-          <div style={{marginBottom: '25px', padding: '25px', background: '#e8f5e9', borderRadius: '12px'}}>
-            <h3 style={{color: '#2e7d32', fontSize: '20px', marginBottom: '10px'}}>2. Water Management</h3>
-            <p style={{color: '#555', fontSize: '16px', lineHeight: '1.7', margin: 0}}>
-              Use drip irrigation for water efficiency. Water crops early morning or evening to reduce evaporation loss.
-            </p>
-          </div>
-
-          <div style={{marginBottom: '25px', padding: '25px', background: '#e8f5e9', borderRadius: '12px'}}>
-            <h3 style={{color: '#2e7d32', fontSize: '20px', marginBottom: '10px'}}>3. Crop Rotation</h3>
-            <p style={{color: '#555', fontSize: '16px', lineHeight: '1.7', margin: 0}}>
-              Rotate crops seasonally. Legumes after cereals improve soil nitrogen and reduce pest problems naturally.
-            </p>
-          </div>
-
-          <div style={{padding: '25px', background: '#e8f5e9', borderRadius: '12px'}}>
-            <h3 style={{color: '#2e7d32', fontSize: '20px', marginBottom: '10px'}}>4. Market Timing</h3>
-            <p style={{color: '#555', fontSize: '16px', lineHeight: '1.7', margin: 0}}>
-              Check market prices before harvest. Sell when demand is high. Use our Market Price page for daily updates.
-            </p>
-          </div>
-
+        <div style={{display: 'flex', flexDirection: 'column', gap: '18px'}}>
+          {tips.map((tip, index) => (
+            <div key={index} style={{
+              background: 'linear-gradient(135deg, #e8f5e9 0%, #dcedc1 100%)',
+              padding: '24px 28px',
+              borderRadius: '16px',
+              border: '2px solid #a5d6a7',
+              boxShadow: '0 8px 20px rgba(76, 175, 80, 0.15)',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+            >
+              <h3 style={{
+                color: '#2e7d32',
+                fontSize: '18px',
+                fontWeight: '700',
+                marginBottom: '8px',
+                margin: '0 0 8px 0'
+              }}>
+                {tip.title}
+              </h3>
+              <p style={{
+                color: '#1b5e20',
+                fontSize: '15px',
+                lineHeight: '1.6',
+                margin: 0,
+                fontWeight: '500'
+              }}>
+                {tip.desc}
+              </p>
+            </div>
+          ))}
         </div>
+
       </div>
     </div>
   );
