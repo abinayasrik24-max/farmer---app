@@ -20,7 +20,7 @@ export default function LoginPage() {
       alert('Login Successful!');
       router.push('/dashboard');
     } else {
-      alert('Invalid Username or Password!\n\nUsername: ramesh, sita, murugan, lakshmi, kumaravel, ponnusamy, meena, ganesan, revathi, venkatesh\nPassword: 1234');
+      alert('Invalid Username or Password!');
     }
   };
 
