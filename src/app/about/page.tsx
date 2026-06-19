@@ -8,7 +8,7 @@ export default function AboutPage() {
       <div style={{
         maxWidth: '950px',
         margin: '0 auto',
-        background: 'rgba(0, 0, 0, 0.52)',
+        background: 'rgba(0, 0, 0, 0.5)',  // Only dark transparent, no blue/gray
         backdropFilter: 'blur(15px)',
         padding: '70px 60px',
         borderRadius: '28px',
@@ -74,7 +74,6 @@ export default function AboutPage() {
           tools and information that drive success in modern agriculture.
         </p>
 
-        {/* Vision Mission Grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -82,12 +81,10 @@ export default function AboutPage() {
           marginTop: '40px'
         }}>
           <div style={{
-            background: 'rgba(34, 197, 94, 0.15)',
+            background: 'rgba(34, 197, 94, 0.12)',
             padding: '40px 35px',
             borderRadius: '20px',
-            border: '1px solid rgba(34, 197, 94, 0.3)',
-            transition: 'transform 0.3s',
-            cursor: 'default'
+            border: '1px solid rgba(34, 197, 94, 0.3)'
           }}>
             <div style={{
               width: '60px',
@@ -100,30 +97,18 @@ export default function AboutPage() {
               fontSize: '28px',
               marginBottom: '20px'
             }}>🎯</div>
-            <h3 style={{
-              fontSize: '24px', 
-              color: 'white', 
-              marginBottom: '15px',
-              fontWeight: '700'
-            }}>Our Vision</h3>
-            <p style={{
-              color: 'white', 
-              opacity: 0.92, 
-              lineHeight: '1.8',
-              fontSize: '16px'
-            }}>
+            <h3 style={{fontSize: '24px', color: 'white', marginBottom: '15px', fontWeight: '700'}}>Our Vision</h3>
+            <p style={{color: 'white', opacity: 0.92, lineHeight: '1.8', fontSize: '16px'}}>
               To create a digitally empowered farming community where every farmer has instant 
               access to data, insights, and opportunities for sustainable growth.
             </p>
           </div>
 
           <div style={{
-            background: 'rgba(34, 197, 94, 0.15)',
+            background: 'rgba(34, 197, 94, 0.12)',
             padding: '40px 35px',
             borderRadius: '20px',
-            border: '1px solid rgba(34, 197, 94, 0.3)',
-            transition: 'transform 0.3s',
-            cursor: 'default'
+            border: '1px solid rgba(34, 197, 94, 0.3)'
           }}>
             <div style={{
               width: '60px',
@@ -136,25 +121,14 @@ export default function AboutPage() {
               fontSize: '28px',
               marginBottom: '20px'
             }}>🚀</div>
-            <h3 style={{
-              fontSize: '24px', 
-              color: 'white', 
-              marginBottom: '15px',
-              fontWeight: '700'
-            }}>Our Mission</h3>
-            <p style={{
-              color: 'white', 
-              opacity: 0.92, 
-              lineHeight: '1.8',
-              fontSize: '16px'
-            }}>
+            <h3 style={{fontSize: '24px', color: 'white', marginBottom: '15px', fontWeight: '700'}}>Our Mission</h3>
+            <p style={{color: 'white', opacity: 0.92, lineHeight: '1.8', fontSize: '16px'}}>
               Deliver accurate, real-time agricultural intelligence that helps farmers make 
               smarter decisions, improve productivity, and build a profitable future.
             </p>
           </div>
         </div>
 
-        {/* Stats Section */}
         <div style={{
           marginTop: '70px',
           paddingTop: '50px',
@@ -185,4 +159,3 @@ export default function AboutPage() {
       </div>
     </div>
   );
-}
