@@ -1,62 +1,81 @@
 export default function AboutPage() {
   return (
     <div style={{
-      backgroundImage: 'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      minHeight: '100vh'
+      minHeight: '100vh',
+      padding: '80px 40px',
+      color: 'white'  // White text for green grass background
     }}>
-      
       <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: 'calc(100vh - 60px)',
-        padding: '40px 20px'
+        maxWidth: '900px',
+        margin: '0 auto',
+        background: 'rgba(0, 0, 0, 0.6)',  // Semi-transparent dark box
+        backdropFilter: 'blur(10px)',
+        padding: '60px 50px',
+        borderRadius: '24px',
+        border: '1px solid rgba(255, 255, 255, 0.2)'
       }}>
-        
-        <div style={{
-          background: 'rgba(255,255,255,0.95)',
-          padding: '60px 50px',
-          borderRadius: '20px',
-          width: '100%',
-          maxWidth: '800px',
-          boxShadow: '0 15px 50px rgba(0,0,0,0.4)'
+        <h1 style={{
+          fontSize: '48px',
+          fontWeight: '800',
+          color: 'white',
+          marginBottom: '30px',
+          textAlign: 'center',
+          textShadow: '0 4px 20px rgba(0,0,0,0.7)'
         }}>
-          
-          <h1 style={{color: '#2e7d32', fontSize: '40px', marginBottom: '25px', textAlign: 'center'}}>
-            About Smart Farmer Portal
-          </h1>
-          
-          <p style={{fontSize: '17px', color: '#555', lineHeight: '1.8', marginBottom: '25px', textAlign: 'center'}}>
-            Smart Farmer Portal is a digital platform designed to empower farmers with data-driven insights for modern agriculture.
-          </p>
+          About Smart Farmer Portal
+        </h1>
+        
+        <p style={{
+          fontSize: '18px',
+          color: 'white',
+          lineHeight: '1.8',
+          marginBottom: '25px',
+          opacity: 0.95
+        }}>
+          Smart Farmer Portal is a technology-driven platform built to empower Indian farmers 
+          with real-time market data, weather insights, and agricultural intelligence.
+        </p>
 
-          <div style={{marginBottom: '35px'}}>
-            <h3 style={{color: '#2e7d32', fontSize: '22px', marginBottom: '15px'}}>Our Mission</h3>
-            <p style={{fontSize: '16px', color: '#555', lineHeight: '1.7'}}>
-              To provide accessible technology that helps farmers increase productivity, reduce costs, and make informed decisions through real-time market data, weather forecasts, and crop management tools.
+        <p style={{
+          fontSize: '18px',
+          color: 'white',
+          lineHeight: '1.8',
+          marginBottom: '25px',
+          opacity: 0.95
+        }}>
+          Our mission is to bridge the gap between traditional farming and modern technology, 
+          helping farmers make informed decisions for better yield and income.
+        </p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '30px',
+          marginTop: '50px'
+        }}>
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            padding: '30px',
+            borderRadius: '16px',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+          }}>
+            <h3 style={{fontSize: '22px', color: 'white', marginBottom: '12px'}}>Our Vision</h3>
+            <p style={{color: 'white', opacity: 0.9, lineHeight: '1.7'}}>
+              To digitize agriculture and make farming data accessible to every farmer in India.
             </p>
           </div>
 
-          <div style={{marginBottom: '35px'}}>
-            <h3 style={{color: '#2e7d32', fontSize: '22px', marginBottom: '15px'}}>Key Features</h3>
-            <ul style={{fontSize: '16px', color: '#555', lineHeight: '1.8', paddingLeft: '20px'}}>
-              <li>Track crop details and growth stages</li>
-              <li>Monitor live market prices across regions</li>
-              <li>Access accurate weather forecasts</li>
-              <li>Calculate income, expenses, and net profit</li>
-              <li>Receive expert agricultural guidance</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 style={{color: '#2e7d32', fontSize: '22px', marginBottom: '15px'}}>Why Choose Us</h3>
-            <p style={{fontSize: '16px', color: '#555', lineHeight: '1.7'}}>
-              Built specifically for Indian farmers, our platform combines simplicity with powerful analytics. No technical knowledge required. Secure login, personalized dashboard, and mobile-friendly design ensure farmers can access information anytime, anywhere.
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            padding: '30px',
+            borderRadius: '16px',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+          }}>
+            <h3 style={{fontSize: '22px', color: 'white', marginBottom: '12px'}}>Our Mission</h3>
+            <p style={{color: 'white', opacity: 0.9, lineHeight: '1.7'}}>
+              Provide accurate market prices, weather alerts, and expert guidance at farmers' fingertips.
             </p>
           </div>
-
         </div>
       </div>
     </div>
