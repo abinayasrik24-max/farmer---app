@@ -9,8 +9,19 @@ export default function LoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Login Successful!');
-    router.push('/dashboard');
+
+    // 10 farmers username list - small letters la dhan type pananum
+    const farmers = ['ramesh', 'sita', 'murugan', 'lakshmi', 'kumaravel', 'ponnusamy', 'meena', 'ganesan', 'revathi', 'venkatesh'];
+
+    // Check panradhu
+    if(farmers.includes(username.toLowerCase()) && password === '1234') {
+      // Step 1: Yaar login pananga nu browser la save panudhu
+      localStorage.setItem('loggedInFarmer', username.toLowerCase());
+      alert('Login Successful!');
+      router.push('/dashboard');
+    } else {
+      alert('Invalid Username or Password!\n\nUsername: ramesh, sita, murugan, lakshmi, kumaravel, ponnusamy, meena, ganesan, revathi, venkatesh\nPassword: 1234');
+    }
   };
 
   return (
@@ -115,7 +126,7 @@ export default function LoginPage() {
                 outline: 'none',
                 background: 'rgba(255, 255, 255, 0.9)',
                 fontWeight: '500',
-                boxSizing: 'border-box' // <-- Alignment fix
+                boxSizing: 'border-box'
               }}
             />
           </div>
@@ -143,7 +154,7 @@ export default function LoginPage() {
                 outline: 'none',
                 background: 'rgba(255, 255, 255, 0.9)',
                 fontWeight: '500',
-                boxSizing: 'border-box' // <-- Alignment fix
+                boxSizing: 'border-box'
               }}
             />
           </div>
