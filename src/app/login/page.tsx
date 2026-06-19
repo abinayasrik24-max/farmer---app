@@ -28,7 +28,6 @@ export default function LoginPage() {
       overflow: 'hidden'
     }}>
       
-      {/* Background glow circles */}
       <div style={{
         position: 'absolute',
         width: '400px',
@@ -50,7 +49,6 @@ export default function LoginPage() {
         filter: 'blur(100px)'
       }}></div>
 
-      {/* Login Box - Centered */}
       <div style={{
         background: 'rgba(255, 255, 255, 0.85)',
         backdropFilter: 'blur(25px)',
@@ -116,7 +114,8 @@ export default function LoginPage() {
                 fontSize: '16px',
                 outline: 'none',
                 background: 'rgba(255, 255, 255, 0.9)',
-                fontWeight: '500'
+                fontWeight: '500',
+                boxSizing: 'border-box' // <-- Alignment fix
               }}
             />
           </div>
@@ -143,7 +142,8 @@ export default function LoginPage() {
                 fontSize: '16px',
                 outline: 'none',
                 background: 'rgba(255, 255, 255, 0.9)',
-                fontWeight: '500'
+                fontWeight: '500',
+                boxSizing: 'border-box' // <-- Alignment fix
               }}
             />
           </div>
