@@ -9,14 +9,14 @@ const priceData = [
   
   // Vegetables - More
   { crop: 'Tomato', market: 'Coimbatore', today: 35, yesterday: 32, weekAvg: 31, type: 'Vegetable' },
-  { crop: 'Onion/Vengayam', market: 'Madurai', today: 28, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
-  { crop: 'Brinjal/Kathirikai', market: 'Tirupur', today: 22, yesterday: 22, weekAvg: 21, type: 'Vegetable' },
-  { crop: 'Potato/Uruulai', market: 'Ooty', today: 25, yesterday: 24, weekAvg: 23, type: 'Vegetable' },
-  { crop: 'Carrot/Kaarai', market: 'Ooty', today: 40, yesterday: 38, weekAvg: 37, type: 'Vegetable' },
-  { crop: 'Cabbage/Mutai', market: 'Coimbatore', today: 18, yesterday: 20, weekAvg: 22, type: 'Vegetable' },
+  { crop: 'Onion', market: 'Madurai', today: 28, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
+  { crop: 'Brinjal', market: 'Tirupur', today: 22, yesterday: 22, weekAvg: 21, type: 'Vegetable' },
+  { crop: 'Potato', market: 'Ooty', today: 25, yesterday: 24, weekAvg: 23, type: 'Vegetable' },
+  { crop: 'Carrot', market: 'Ooty', today: 40, yesterday: 38, weekAvg: 37, type: 'Vegetable' },
+  { crop: 'Cabbage', market: 'Coimbatore', today: 18, yesterday: 20, weekAvg: 22, type: 'Vegetable' },
   { crop: 'Cauliflower', market: 'Coimbatore', today: 30, yesterday: 28, weekAvg: 27, type: 'Vegetable' },
-  { crop: 'Bhindi/Vendakai', market: 'Tirupur', today: 32, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
-  { crop: 'Drumstick/Murungai', market: 'Madurai', today: 80, yesterday: 75, weekAvg: 70, type: 'Vegetable' },
+  { crop: 'Ladiesfinger', market: 'Tirupur', today: 32, yesterday: 30, weekAvg: 29, type: 'Vegetable' },
+  { crop: 'Drumstick', market: 'Madurai', today: 80, yesterday: 75, weekAvg: 70, type: 'Vegetable' },
   { crop: 'Beans', market: 'Ooty', today: 45, yesterday: 42, weekAvg: 40, type: 'Vegetable' },
   
   // Fruits
