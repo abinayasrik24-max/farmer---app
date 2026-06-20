@@ -1,3 +1,5 @@
+'use client';
+
 export default function TipsPage() {
   const tips = [
     {
@@ -68,12 +70,8 @@ export default function TipsPage() {
               padding: '24px 28px',
               borderRadius: '16px',
               border: '2px solid #4caf50',
-              boxShadow: '0 8px 20px rgba(76, 175, 80, 0.3)',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-            >
+              boxShadow: '0 8px 20px rgba(76, 175, 80, 0.3)'
+            }}>
               <h3 style={{
                 color: '#2e7d32',
                 fontSize: '18px',
