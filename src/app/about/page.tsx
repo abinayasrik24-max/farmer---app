@@ -1,158 +1,170 @@
 export default function AboutPage() {
+  const features = [
+    {icon: '📊', title: 'Real-time Market Prices', desc: 'Live Mandi prices updated daily. Compare rates across districts and sell at best price.'},
+    {icon: '🌤️', title: 'Weather Forecast', desc: '7-day precision weather forecast for your location. Plan farming activities smartly.'},
+    {icon: '🌱', title: 'Expert Farming Tips', desc: 'Science-backed tips from agricultural experts. Improve yield with proven techniques.'},
+    {icon: '🏛️', title: 'Govt Schemes', desc: 'All central & state farmer schemes in one place. Direct links to apply and avail benefits.'}
+  ];
+
   return (
     <div style={{
       minHeight: '100vh',
-      padding: '100px 40px',
-      color: 'white'
+      background: 'linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%)',
+      padding: '60px 20px'
     }}>
-      <div style={{
-        maxWidth: '950px',
-        margin: '0 auto',
-        background: 'rgba(0, 0, 0, 0.5)',  // Only dark transparent, no blue/gray
-        backdropFilter: 'blur(15px)',
-        padding: '70px 60px',
-        borderRadius: '28px',
-        border: '1px solid rgba(255, 255, 255, 0.25)',
-        boxShadow: '0 25px 70px rgba(0,0,0,0.4)'
-      }}>
+      
+      <div style={{maxWidth: '1100px', margin: '0 auto'}}>
         
-        <div style={{textAlign: 'center', marginBottom: '50px'}}>
+        {/* Hero Section */}
+        <div style={{
+          background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
+          padding: '60px 40px',
+          borderRadius: '24px',
+          textAlign: 'center',
+          marginBottom: '50px',
+          boxShadow: '0 20px 50px rgba(46, 125, 50, 0.4)'
+        }}>
+          <div style={{fontSize: '70px', marginBottom: '20px'}}>🌾</div>
           <h1 style={{
-            fontSize: '52px',
-            fontWeight: '800',
             color: 'white',
-            marginBottom: '18px',
-            letterSpacing: '-1.5px',
-            textShadow: '0 4px 25px rgba(0,0,0,0.8)'
+            fontSize: '45px',
+            fontWeight: '900',
+            marginBottom: '15px'
           }}>
             About Smart Farmer Portal
           </h1>
           <div style={{
             width: '80px',
             height: '4px',
-            background: 'linear-gradient(90deg, #22c55e, #16a34a)',
-            margin: '0 auto',
+            background: '#81c784',
+            margin: '0 auto 20px auto',
             borderRadius: '2px'
           }}></div>
+          <p style={{
+            color: '#c8e6c9',
+            fontSize: '18px',
+            lineHeight: '1.8',
+            maxWidth: '700px',
+            margin: '0 auto',
+            fontWeight: '500'
+          }}>
+            Empowering Indian farmers with technology, real-time data, and expert guidance for profitable and sustainable agriculture
+          </p>
         </div>
 
-        <p style={{
-          fontSize: '19px',
-          color: 'white',
-          lineHeight: '1.9',
-          marginBottom: '28px',
-          opacity: 0.96,
-          textShadow: '0 2px 12px rgba(0,0,0,0.6)'
+        {/* Mission Section */}
+        <div style={{
+          background: 'white',
+          padding: '50px 40px',
+          borderRadius: '20px',
+          marginBottom: '40px',
+          boxShadow: '0 12px 35px rgba(76, 175, 80, 0.15)',
+          borderTop: '5px solid #4caf50'
         }}>
-          Smart Farmer Portal is a cutting-edge digital ecosystem designed to revolutionize 
-          Indian agriculture. We empower farmers with real-time market intelligence, precision 
-          weather forecasts, and science-backed farming guidance - all at their fingertips.
-        </p>
+          <h2 style={{
+            color: '#1b5e20',
+            fontSize: '32px',
+            fontWeight: '800',
+            marginBottom: '20px',
+            textAlign: 'center'
+          }}>
+            Our Mission
+          </h2>
+          <p style={{
+            color: '#424242',
+            fontSize: '17px',
+            lineHeight: '1.8',
+            textAlign: 'center',
+            maxWidth: '800px',
+            margin: '0 auto 25px auto'
+          }}>
+            Smart Farmer Portal is a cutting-edge digital ecosystem designed to revolutionize Indian agriculture. 
+            We bridge the gap between traditional farming wisdom and modern technology.
+          </p>
+          <p style={{
+            color: '#424242',
+            fontSize: '17px',
+            lineHeight: '1.8',
+            textAlign: 'center',
+            maxWidth: '800px',
+            margin: '0 auto'
+          }}>
+            By delivering transparent market data, precision weather forecasts, and actionable insights, 
+            we help farmers maximize yield, reduce risks, and secure better income.
+          </p>
+        </div>
 
-        <p style={{
-          fontSize: '19px',
-          color: 'white',
-          lineHeight: '1.9',
-          marginBottom: '28px',
-          opacity: 0.96,
-          textShadow: '0 2px 12px rgba(0,0,0,0.6)'
+        {/* Features Grid */}
+        <h2 style={{
+          color: '#1b5e20',
+          fontSize: '32px',
+          fontWeight: '800',
+          textAlign: 'center',
+          marginBottom: '35px'
         }}>
-          Our platform bridges the gap between traditional farming wisdom and modern technology. 
-          By delivering transparent market data and actionable insights, we help farmers maximize 
-          yield, reduce risks, and secure better income for their hard work.
-        </p>
-
-        <p style={{
-          fontSize: '19px',
-          color: 'white',
-          lineHeight: '1.9',
-          marginBottom: '55px',
-          opacity: 0.96,
-          textShadow: '0 2px 12px rgba(0,0,0,0.6)'
-        }}>
-          Built by farmers, for farmers. We believe every farmer deserves access to the same 
-          tools and information that drive success in modern agriculture.
-        </p>
-
+          What We Offer
+        </h2>
+        
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '35px',
-          marginTop: '40px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '25px',
+          marginBottom: '50px'
         }}>
-          <div style={{
-            background: 'rgba(34, 197, 94, 0.12)',
-            padding: '40px 35px',
-            borderRadius: '20px',
-            border: '1px solid rgba(34, 197, 94, 0.3)'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-              borderRadius: '14px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '28px',
-              marginBottom: '20px'
-            }}>🎯</div>
-            <h3 style={{fontSize: '24px', color: 'white', marginBottom: '15px', fontWeight: '700'}}>Our Vision</h3>
-            <p style={{color: 'white', opacity: 0.92, lineHeight: '1.8', fontSize: '16px'}}>
-              To create a digitally empowered farming community where every farmer has instant 
-              access to data, insights, and opportunities for sustainable growth.
-            </p>
-          </div>
-
-          <div style={{
-            background: 'rgba(34, 197, 94, 0.12)',
-            padding: '40px 35px',
-            borderRadius: '20px',
-            border: '1px solid rgba(34, 197, 94, 0.3)'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-              borderRadius: '14px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '28px',
-              marginBottom: '20px'
-            }}>🚀</div>
-            <h3 style={{fontSize: '24px', color: 'white', marginBottom: '15px', fontWeight: '700'}}>Our Mission</h3>
-            <p style={{color: 'white', opacity: 0.92, lineHeight: '1.8', fontSize: '16px'}}>
-              Deliver accurate, real-time agricultural intelligence that helps farmers make 
-              smarter decisions, improve productivity, and build a profitable future.
-            </p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} style={{
+              background: 'white',
+              padding: '35px 25px',
+              borderRadius: '18px',
+              textAlign: 'center',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+              borderBottom: '4px solid #4caf50'
+            }}>
+              <div style={{fontSize: '50px', marginBottom: '15px'}}>{feature.icon}</div>
+              <h3 style={{
+                color: '#1b5e20',
+                fontSize: '19px',
+                fontWeight: '800',
+                marginBottom: '12px'
+              }}>
+                {feature.title}
+              </h3>
+              <p style={{
+                color: '#555',
+                fontSize: '14px',
+                lineHeight: '1.6'
+              }}>
+                {feature.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
+        {/* Stats Section */}
         <div style={{
-          marginTop: '70px',
-          paddingTop: '50px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+          background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
+          padding: '40px',
+          borderRadius: '20px',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-          gap: '40px',
+          gap: '30px',
           textAlign: 'center'
         }}>
           <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>1000+</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Farmers Served</div>
+            <div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>10K+</div>
+            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Farmers Registered</div>
           </div>
           <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>50+</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Mandi Markets</div>
+            <div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>500+</div>
+            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Mandis Covered</div>
           </div>
           <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>24/7</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Data Access</div>
+            <div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>24/7</div>
+            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Support Available</div>
           </div>
           <div>
-            <div style={{fontSize: '42px', fontWeight: '800', color: '#4ade80'}}>100%</div>
-            <div style={{fontSize: '15px', color: 'white', opacity: 0.85, marginTop: '8px'}}>Free Platform</div>
+            <div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>100%</div>
+            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Free Platform</div>
           </div>
         </div>
 
