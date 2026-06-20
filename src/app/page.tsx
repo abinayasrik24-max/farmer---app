@@ -12,16 +12,16 @@ export default function HomePage() {
     <div style={{background: '#f8fff9'}}>
       
       {/* SECTION 1: HERO - Tight Top Spacing */}
-      <section style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%)',
-        padding: '20px 20px 60px 20px',
-        paddingTop: '18px',
-        position: 'relative'
-      }}>
+<section style={{
+  textAlign: 'center', 
+  padding: '60px 20px',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)'
+}}>
         <div style={{maxWidth: '850px', textAlign: 'center', zIndex: 2}}>
           <div style={{fontSize: '70px', marginBottom: '15px'}}>🌾</div>
           <h1 style={{
