@@ -182,25 +182,21 @@ export default function MarketPricePage() {
           </div>
         </div>
 
-        {/* Farmer Tip - Green Card */}
-   tsx
-{/* Farmer Tip - Professional English */}
-<div style={{
-  padding: '25px',
-  background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
-  borderLeft: '6px solid #2e7d32',
-  borderRadius: '14px',
-  boxShadow: '0 8px 25px rgba(76,175,80,0.15)'
-}}>
-  <h3 style={{color: '#1b5e20', marginBottom: '12px', fontSize: '18px', fontWeight: '800'}}>🌱 Market Advisory Today</h3>
-  <p style={{color: '#2e7d32', lineHeight: '1.8', fontSize: '15px', fontWeight: '500'}}>
-    <strong>Paddy:</strong> Prices have risen to ₹2,200 per quintal, up from the 7-day average of ₹2,100. Current market conditions are favorable for selling.
-    <br/><br/>
-    <strong>Drumstick:</strong> Trading at ₹80, which is ₹10 above weekly average. Strong demand observed in Tirupur mandi. Consider early harvesting.
-    <br/><br/>
-    <strong>Cabbage:</strong> Current price ₹18 is ₹4 below the 7-day average. Market correction expected. Farmers are advised to hold for better rates.
-  </p>
-</div>
+        {/* Farmer Tip - Professional English */}
+        <div style={{
+          padding: '25px',
+          background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
+          borderLeft: '6px solid #2e7d32',
+          borderRadius: '14px',
+          boxShadow: '0 8px 25px rgba(76,175,80,0.15)'
+        }}>
+          <h3 style={{color: '#1b5e20', marginBottom: '12px', fontSize: '18px', fontWeight: '800'}}>🌱 Market Advisory Today</h3>
+          <p style={{color: '#2e7d32', lineHeight: '1.8', fontSize: '15px', fontWeight: '500'}}>
+            <strong>Paddy:</strong> Prices have risen to ₹2,200 per quintal, up from the 7-day average of ₹2,100. Current market conditions are favorable for selling.
+            <br/><br/>
+            <strong>Drumstick:</strong> Trading at ₹80, which is ₹10 above weekly average. Strong demand observed in Tirupur mandi. Consider early harvesting.
+            <br/><br/>
+            <strong>Cabbage:</strong> Current price ₹18 is ₹4 below the 7-day average. Market correction expected. Farmers are advised to hold for better rates.
           </p>
         </div>
 
