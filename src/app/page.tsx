@@ -2,10 +2,33 @@ import Link from 'next/link';
 
 export default function HomePage() {
   const features = [
-    {icon: '📈', title: 'Live Market Prices', desc: 'Daily Mandi rates from 500+ markets'},
-    {icon: '🌤️', title: 'Weather Forecast', desc: '7-day precision forecast for your farm'},
-    {icon: '🌱', title: 'Expert Tips', desc: 'Science-backed farming guidance'},
-    {icon: '🏛️', title: 'Govt Schemes', desc: 'All farmer schemes in one place'}
+    {
+      icon: '📊',
+      title: 'Market Data',
+      desc: 'Access daily APMC mandi prices and historical trends across Tamil Nadu markets. Compare and sell at best price.'
+    },
+    {
+      icon: '🌤️',
+      title: 'Weather Insights',
+      desc: 'Accurate 7-day forecasts and alerts to plan sowing, irrigation, and harvesting schedules perfectly.'
+    },
+    {
+      icon: '🏛️',
+      title: 'Government Schemes',
+      desc: 'Complete information on PM-Kisan, PMFBY, Soil Health Card, and all state subsidy programs with direct links.'
+    },
+    {
+      icon: '💡',
+      title: 'Expert Guidance',
+      desc: 'Scientific farming practices and crop management tips from agricultural experts and agronomists.'
+    }
+  ];
+
+  const stats = [
+    {number: '10K+', label: 'Active Farmers'},
+    {number: '500+', label: 'Mandis Covered'},
+    {number: '24/7', label: 'Support'},
+    {number: '100%', label: 'Free Platform'}
   ];
 
   return (
@@ -14,9 +37,9 @@ export default function HomePage() {
       background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%)'
     }}>
       
-      {/* Hero Section */}
+      {/* 1. HERO SECTION - Image 1 ku replacement */}
       <div style={{
-        minHeight: '85vh',
+        minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -25,13 +48,23 @@ export default function HomePage() {
         overflow: 'hidden'
       }}>
         
+        {/* Background Circles */}
         <div style={{
           position: 'absolute',
-          top: '-100px',
-          right: '-100px',
+          top: '-150px',
+          right: '-150px',
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(76,175,80,0.25) 0%, transparent 70%)',
+          borderRadius: '50%'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          bottom: '-100px',
+          left: '-100px',
           width: '400px',
           height: '400px',
-          background: 'radial-gradient(circle, rgba(76,175,80,0.3) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(46,125,50,0.2) 0%, transparent 70%)',
           borderRadius: '50%'
         }}></div>
         
@@ -41,46 +74,47 @@ export default function HomePage() {
           zIndex: 1
         }}>
           
-          <div style={{fontSize: '80px', marginBottom: '20px'}}>🌾</div>
+          <div style={{fontSize: '85px', marginBottom: '25px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))'}}>🌾</div>
           
           <h1 style={{
             color: '#1b5e20',
-            fontSize: '52px',
+            fontSize: '56px',
             fontWeight: '900',
-            marginBottom: '20px',
-            lineHeight: '1.2'
+            marginBottom: '22px',
+            lineHeight: '1.2',
+            textShadow: '0 4px 15px rgba(46,125,50,0.15)'
           }}>
             Smart Agriculture<br/>Intelligence
           </h1>
           
           <p style={{
             color: '#2e7d32',
-            fontSize: '19px',
+            fontSize: '20px',
             lineHeight: '1.7',
-            marginBottom: '40px',
+            marginBottom: '45px',
             fontWeight: '500',
-            maxWidth: '650px',
-            margin: '0 auto 40px auto'
+            maxWidth: '700px',
+            margin: '0 auto 45px auto'
           }}>
             Real-time market data, weather insights, and farming intelligence powered by technology for modern Indian farmers
           </p>
 
           <div style={{
             display: 'flex',
-            gap: '15px',
+            gap: '18px',
             justifyContent: 'center',
             flexWrap: 'wrap'
           }}>
             <Link href="/market" style={{
               background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
               color: 'white',
-              padding: '16px 35px',
-              borderRadius: '12px',
-              fontSize: '16px',
-              fontWeight: '700',
+              padding: '18px 40px',
+              borderRadius: '14px',
+              fontSize: '17px',
+              fontWeight: '800',
               textDecoration: 'none',
-              boxShadow: '0 10px 25px rgba(76,175,80,0.4)',
-              display: 'inline-block'
+              boxShadow: '0 12px 30px rgba(76,175,80,0.4)',
+              transition: 'all 0.3s ease'
             }}>
               📊 Check Market Price
             </Link>
@@ -88,14 +122,14 @@ export default function HomePage() {
             <Link href="/login" style={{
               background: 'white',
               color: '#2e7d32',
-              padding: '16px 35px',
-              borderRadius: '12px',
-              fontSize: '16px',
-              fontWeight: '700',
+              padding: '18px 40px',
+              borderRadius: '14px',
+              fontSize: '17px',
+              fontWeight: '800',
               textDecoration: 'none',
               border: '3px solid #4caf50',
-              boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-              display: 'inline-block'
+              boxShadow: '0 12px 30px rgba(0,0,0,0.1)',
+              transition: 'all 0.3s ease'
             }}>
               🚀 Get Started Free
             </Link>
@@ -104,60 +138,78 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Features Section */}
+      {/* 2. BUILT FOR FARMERS SECTION - Image 2 ku replacement */}
       <div style={{
-        padding: '80px 20px',
+        padding: '90px 20px',
         background: 'white'
       }}>
-        <div style={{maxWidth: '1100px', margin: '0 auto'}}>
+        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
           
-          <h2 style={{
-            textAlign: 'center',
-            color: '#1b5e20',
-            fontSize: '36px',
-            fontWeight: '900',
-            marginBottom: '15px'
-          }}>
-            Everything You Need
-          </h2>
-          <p style={{
-            textAlign: 'center',
-            color: '#555',
-            fontSize: '16px',
-            marginBottom: '50px'
-          }}>
-            One platform for all your farming needs
-          </p>
+          <div style={{textAlign: 'center', marginBottom: '55px'}}>
+            <h2 style={{
+              color: '#1b5e20',
+              fontSize: '42px',
+              fontWeight: '900',
+              marginBottom: '15px'
+            }}>
+              Built for Farmers
+            </h2>
+            <p style={{
+              color: '#2e7d32',
+              fontSize: '18px',
+              fontWeight: '500'
+            }}>
+              Technology-driven solutions for modern agriculture
+            </p>
+          </div>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '25px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
+            gap: '30px'
           }}>
-            {features.map((feature, index) => (
+            {features.map((item, index) => (
               <div key={index} style={{
-                background: 'linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%)',
-                padding: '35px 25px',
-                borderRadius: '18px',
+                background: 'linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%)',
+                padding: '38px 30px',
+                borderRadius: '22px',
                 textAlign: 'center',
-                borderTop: '4px solid #4caf50',
-                boxShadow: '0 8px 25px rgba(76,175,80,0.15)'
+                boxShadow: '0 15px 40px rgba(76, 175, 80, 0.12)',
+                borderTop: '5px solid #4caf50',
+                transition: 'all 0.3s ease'
               }}>
-                <div style={{fontSize: '50px', marginBottom: '15px'}}>{feature.icon}</div>
+                
+                <div style={{
+                  width: '85px',
+                  height: '85px',
+                  background: 'white',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 22px auto',
+                  fontSize: '42px',
+                  boxShadow: '0 10px 25px rgba(76, 175, 80, 0.25)',
+                  border: '3px solid #e8f5e9'
+                }}>
+                  {item.icon}
+                </div>
+                
                 <h3 style={{
                   color: '#1b5e20',
-                  fontSize: '20px',
+                  fontSize: '23px',
                   fontWeight: '800',
-                  marginBottom: '10px'
+                  marginBottom: '14px'
                 }}>
-                  {feature.title}
+                  {item.title}
                 </h3>
+                
                 <p style={{
                   color: '#555',
-                  fontSize: '14px',
-                  lineHeight: '1.6'
+                  fontSize: '15px',
+                  lineHeight: '1.7'
                 }}>
-                  {feature.desc}
+                  {item.desc}
                 </p>
               </div>
             ))}
@@ -165,10 +217,10 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Stats Section */}
+      {/* 3. STATS SECTION - Attraction ku */}
       <div style={{
         background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
-        padding: '60px 20px'
+        padding: '70px 20px'
       }}>
         <div style={{
           maxWidth: '1000px',
@@ -178,54 +230,59 @@ export default function HomePage() {
           gap: '40px',
           textAlign: 'center'
         }}>
-          <div>
-            <div style={{color: 'white', fontSize: '45px', fontWeight: '900'}}>10K+</div>
-            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Active Farmers</div>
-          </div>
-          <div>
-            <div style={{color: 'white', fontSize: '45px', fontWeight: '900'}}>500+</div>
-            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Mandis Covered</div>
-          </div>
-          <div>
-            <div style={{color: 'white', fontSize: '45px', fontWeight: '900'}}>24/7</div>
-            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Support</div>
-          </div>
-          <div>
-            <div style={{color: 'white', fontSize: '45px', fontWeight: '900'}}>100%</div>
-            <div style={{color: '#c8e6c9', fontSize: '15px', fontWeight: '600'}}>Free Forever</div>
-          </div>
+          {stats.map((stat, index) => (
+            <div key={index}>
+              <div style={{
+                color: 'white',
+                fontSize: '48px',
+                fontWeight: '900',
+                marginBottom: '8px'
+              }}>
+                {stat.number}
+              </div>
+              <div style={{
+                color: '#c8e6c9',
+                fontSize: '16px',
+                fontWeight: '600'
+              }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* 4. FINAL CTA SECTION */}
       <div style={{
-        padding: '80px 20px',
-        textAlign: 'center'
+        padding: '90px 20px',
+        textAlign: 'center',
+        background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)'
       }}>
         <h2 style={{
           color: '#1b5e20',
-          fontSize: '38px',
+          fontSize: '40px',
           fontWeight: '900',
-          marginBottom: '15px'
+          marginBottom: '18px'
         }}>
           Ready to Grow Smarter?
         </h2>
         <p style={{
           color: '#2e7d32',
-          fontSize: '17px',
-          marginBottom: '30px'
+          fontSize: '18px',
+          marginBottom: '35px',
+          fontWeight: '500'
         }}>
           Join thousands of farmers already using Smart Farmer Portal
         </p>
         <Link href="/login" style={{
           background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
           color: 'white',
-          padding: '18px 45px',
-          borderRadius: '14px',
-          fontSize: '18px',
+          padding: '20px 50px',
+          borderRadius: '16px',
+          fontSize: '19px',
           fontWeight: '800',
           textDecoration: 'none',
-          boxShadow: '0 12px 30px rgba(76,175,80,0.4)',
+          boxShadow: '0 15px 35px rgba(76,175,80,0.4)',
           display: 'inline-block'
         }}>
           Start Free Today →
