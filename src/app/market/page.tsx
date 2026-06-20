@@ -143,45 +143,25 @@ export default function MarketPricePage() {
             </tbody>
           </table>
         </div>
-
-        {/* 7 Day Trend Chart */}
-        <div style={{marginBottom: '40px'}}>
-          <h3 style={{color: '#1b5e20', marginBottom: '20px', fontSize: '20px', fontWeight: '800'}}>📈 7 Day Trend - Tomato Coimbatore</h3>
-          <div style={{
-            display: 'flex', 
-            gap: '10px', 
-            alignItems: 'flex-end', 
-            height: '140px', 
-            paddingBottom: '25px',
-            background: '#f1f8e9',
-            padding: '25px 15px',
-            borderRadius: '14px'
-          }}>
-            {[32, 30, 33, 31, 34, 32, 35].map((price, i) => (
-              <div key={i} style={{flex: 1, textAlign: 'center'}}>
-                <div style={{
-                  background: 'linear-gradient(to top, #4caf50, #2e7d32)',
-                  height: `${price * 3.5}px`,
-                  borderRadius: '6px 6px 0 0',
-                  position: 'relative',
-                  boxShadow: '0 4px 12px rgba(76,175,80,0.3)'
-                }}>
-                  <span style={{
-                    position: 'absolute', 
-                    top: '-28px', 
-                    left: '50%', 
-                    transform: 'translateX(-50%)', 
-                    fontSize: '12px', 
-                    fontWeight: 'bold',
-                    color: '#1b5e20'
-                  }}>₹{price}</span>
-                </div>
-                <span style={{fontSize: '11px', color: '#2e7d32', fontWeight: '600'}}>Day {i+1}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
+<div style={{
+  background: '#e8f5e9',
+  padding: '20px',
+  borderRadius: '10px',
+  marginTop: '30px',
+  borderLeft: '4px solid green'
+}}>
+  <h3 style={{margin: '0 0 10px 0', color: '#2e7d32'}}>⏰ General Market Timing</h3>
+  <p style={{margin: '5px 0', fontSize: '16px'}}>
+    <b>Arrival Time:</b> 4:00 AM - 8:00 AM
+  </p>
+  <p style={{margin: '5px 0', fontSize: '16px'}}>
+    <b>Best Price Time:</b> 6:00 AM - 7:00 AM
+  </p>
+  <small style={{color: '#666'}}>Most markets follow this timing. Late arrival usually means lower prices.</small>
+</div>
+       
+        
+           
         {/* Farmer Tip - Professional English */}
         <div style={{
           padding: '25px',
