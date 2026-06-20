@@ -97,7 +97,7 @@ export default function SchemesPage() {
             fontSize: '16px',
             fontWeight: '600'
           }}>
-            Farmers ku Central Govt benefits - Apply panni use panunga
+            Central Goverment Benefits for Farmers - Apply and Avail the schemes
           </p>
         </div>
 
