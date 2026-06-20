@@ -14,8 +14,8 @@ export default function HomePage() {
       {/* SECTION 1: HERO - Tight Top Spacing */}
 <section style={{
   textAlign: 'center', 
-  padding: '60px 20px',
-  minHeight: '100vh',
+  padding: '20px 20px',
+  minHeight: '70vh',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
