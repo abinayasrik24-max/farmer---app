@@ -21,17 +21,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body style={{ margin: 0, padding: 0, fontFamily: 'Arial, sans-serif' }}>
         
-        {/* UNIQUE GLASS NAVBAR - Green circle fix */}
+        {/* UNIQUE GLASS NAVBAR - Compact */}
         <nav style={{
           position: 'sticky',
           top: 0,
           zIndex: 1000,
-          background: 'rgba(27, 94, 32, 0.85)',
+          background: 'rgba(27, 94, 32, 0.9)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
           borderBottom: '2px solid rgba(76, 175, 80, 0.3)',
-          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-          padding: '12px 20px'
+          boxShadow: '0 6px 25px rgba(0, 0, 0, 0.12)',
+          padding: '8px 20px'
         }}>
           <div style={{
             maxWidth: '1200px',
@@ -39,11 +39,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '8px'
+            gap: '4px'
           }}>
             <div style={{
               color: 'white',
-              fontSize: '20px',
+              fontSize: '19px',
               fontWeight: '800',
               letterSpacing: '0.5px'
             }}>
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             
             <div style={{
               display: 'flex',
-              gap: '28px',
+              gap: '24px',
               flexWrap: 'wrap',
               justifyContent: 'center'
             }}>
@@ -63,10 +63,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   style={{
                     color: 'rgba(255, 255, 255, 0.95)',
                     textDecoration: 'none',
-                    fontSize: '15px',
+                    fontSize: '14px',
                     fontWeight: '600',
-                    padding: '6px 12px',
-                    borderRadius: '8px',
+                    padding: '5px 10px',
+                    borderRadius: '6px',
                     transition: 'all 0.3s ease'
                   }}
                 >
@@ -77,12 +77,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </nav>
 
-        {/* MAIN CONTENT - Red distance fix */}
-        <main style={{
-          minHeight: 'calc(100vh - 100px)',
-          margin: 0,
-          padding: 0
-        }}>
+        {/* MAIN CONTENT - No margin */}
+        <main style={{ margin: 0, padding: 0 }}>
           {children}
         </main>
       </body>

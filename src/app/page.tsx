@@ -2,292 +2,175 @@ import Link from 'next/link';
 
 export default function HomePage() {
   const features = [
-    {
-      icon: '📊',
-      title: 'Market Data',
-      desc: 'Access daily APMC mandi prices and historical trends across Tamil Nadu markets. Compare and sell at best price.'
-    },
-    {
-      icon: '🌤️',
-      title: 'Weather Insights',
-      desc: 'Accurate 7-day forecasts and alerts to plan sowing, irrigation, and harvesting schedules perfectly.'
-    },
-    {
-      icon: '🏛️',
-      title: 'Government Schemes',
-      desc: 'Complete information on PM-Kisan, PMFBY, Soil Health Card, and all state subsidy programs with direct links.'
-    },
-    {
-      icon: '💡',
-      title: 'Expert Guidance',
-      desc: 'Scientific farming practices and crop management tips from agricultural experts and agronomists.'
-    }
-  ];
-
-  const stats = [
-    {number: '10K+', label: 'Active Farmers'},
-    {number: '500+', label: 'Mandis Covered'},
-    {number: '24/7', label: 'Support'},
-    {number: '100%', label: 'Free Platform'}
+    {icon: '📊', title: 'Market Data', desc: 'Daily APMC mandi prices from 500+ Tamil Nadu markets. Compare rates and sell at best price.'},
+    {icon: '🌤️', title: 'Weather Insights', desc: '7-day precision forecast for your exact location. Plan sowing, irrigation, harvesting.'},
+    {icon: '🏛️', title: 'Govt Schemes', desc: 'PM-Kisan, PMFBY, Soil Health Card, KCC - all schemes with direct application links.'},
+    {icon: '💡', title: 'Expert Guidance', desc: 'Science-backed tips from agricultural experts. Improve yield with proven techniques.'}
   ];
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%)'
-    }}>
+    <div style={{background: '#f8fff9'}}>
       
-      {/* 1. HERO SECTION - Image 1 ku replacement */}
-      <div style={{
-        minHeight: '90vh',
+      {/* SECTION 1: HERO - Tight Top Spacing */}
+      <section style={{
+        minHeight: '100vh',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
-        padding: '60px 20px',
-        position: 'relative',
-        overflow: 'hidden'
+        background: 'linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%)',
+        padding: '20px 20px 60px 20px',
+        paddingTop: '18px',
+        position: 'relative'
       }}>
-        
-        {/* Background Circles */}
-        <div style={{
-          position: 'absolute',
-          top: '-150px',
-          right: '-150px',
-          width: '500px',
-          height: '500px',
-          background: 'radial-gradient(circle, rgba(76,175,80,0.25) 0%, transparent 70%)',
-          borderRadius: '50%'
-        }}></div>
-        <div style={{
-          position: 'absolute',
-          bottom: '-100px',
-          left: '-100px',
-          width: '400px',
-          height: '400px',
-          background: 'radial-gradient(circle, rgba(46,125,50,0.2) 0%, transparent 70%)',
-          borderRadius: '50%'
-        }}></div>
-        
-        <div style={{
-          maxWidth: '900px',
-          textAlign: 'center',
-          zIndex: 1
-        }}>
-          
-          <div style={{fontSize: '85px', marginBottom: '25px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))'}}>🌾</div>
-          
+        <div style={{maxWidth: '850px', textAlign: 'center', zIndex: 2}}>
+          <div style={{fontSize: '70px', marginBottom: '15px'}}>🌾</div>
           <h1 style={{
             color: '#1b5e20',
-            fontSize: '56px',
+            fontSize: '48px',
             fontWeight: '900',
-            marginBottom: '22px',
-            lineHeight: '1.2',
-            textShadow: '0 4px 15px rgba(46,125,50,0.15)'
+            marginBottom: '15px',
+            lineHeight: '1.25'
           }}>
-            Smart Agriculture<br/>Intelligence
+            Smart Agriculture Intelligence
           </h1>
-          
           <p style={{
             color: '#2e7d32',
-            fontSize: '20px',
+            fontSize: '18px',
             lineHeight: '1.7',
-            marginBottom: '45px',
-            fontWeight: '500',
-            maxWidth: '700px',
-            margin: '0 auto 45px auto'
+            marginBottom: '30px',
+            fontWeight: '500'
           }}>
-            Real-time market data, weather insights, and farming intelligence powered by technology for modern Indian farmers
+            Real-time market data, weather insights, and farming intelligence for modern Indian farmers
           </p>
-
-          <div style={{
-            display: 'flex',
-            gap: '18px',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
-          }}>
+          <div style={{display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap'}}>
             <Link href="/market" style={{
               background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
               color: 'white',
-              padding: '18px 40px',
-              borderRadius: '14px',
-              fontSize: '17px',
-              fontWeight: '800',
+              padding: '15px 35px',
+              borderRadius: '12px',
+              fontSize: '16px',
+              fontWeight: '700',
               textDecoration: 'none',
-              boxShadow: '0 12px 30px rgba(76,175,80,0.4)',
-              transition: 'all 0.3s ease'
+              boxShadow: '0 10px 25px rgba(76,175,80,0.4)'
             }}>
               📊 Check Market Price
             </Link>
-            
             <Link href="/login" style={{
               background: 'white',
               color: '#2e7d32',
-              padding: '18px 40px',
-              borderRadius: '14px',
-              fontSize: '17px',
-              fontWeight: '800',
+              padding: '15px 35px',
+              borderRadius: '12px',
+              fontSize: '16px',
+              fontWeight: '700',
               textDecoration: 'none',
-              border: '3px solid #4caf50',
-              boxShadow: '0 12px 30px rgba(0,0,0,0.1)',
-              transition: 'all 0.3s ease'
+              border: '3px solid #4caf50'
             }}>
-              🚀 Get Started Free
+              🚀 Get Started
             </Link>
           </div>
-
         </div>
-      </div>
+      </section>
 
-      {/* 2. BUILT FOR FARMERS SECTION - Image 2 ku replacement */}
-      <div style={{
-        padding: '90px 20px',
+      {/* SECTION 2: FEATURES */}
+      <section style={{
+        padding: '60px 20px',
         background: 'white'
       }}>
-        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
-          
-          <div style={{textAlign: 'center', marginBottom: '55px'}}>
-            <h2 style={{
-              color: '#1b5e20',
-              fontSize: '42px',
-              fontWeight: '900',
-              marginBottom: '15px'
-            }}>
+        <div style={{maxWidth: '1150px', margin: '0 auto'}}>
+          <div style={{textAlign: 'center', marginBottom: '40px'}}>
+            <h2 style={{color: '#1b5e20', fontSize: '36px', fontWeight: '900', marginBottom: '10px'}}>
               Built for Farmers
             </h2>
-            <p style={{
-              color: '#2e7d32',
-              fontSize: '18px',
-              fontWeight: '500'
-            }}>
+            <p style={{color: '#2e7d32', fontSize: '16px', fontWeight: '500'}}>
               Technology-driven solutions for modern agriculture
             </p>
           </div>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
-            gap: '30px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '25px'
           }}>
             {features.map((item, index) => (
               <div key={index} style={{
                 background: 'linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%)',
-                padding: '38px 30px',
-                borderRadius: '22px',
+                padding: '30px 25px',
+                borderRadius: '18px',
                 textAlign: 'center',
-                boxShadow: '0 15px 40px rgba(76, 175, 80, 0.12)',
-                borderTop: '5px solid #4caf50',
-                transition: 'all 0.3s ease'
+                borderTop: '4px solid #4caf50',
+                boxShadow: '0 10px 30px rgba(76, 175, 80, 0.12)'
               }}>
-                
                 <div style={{
-                  width: '85px',
-                  height: '85px',
+                  width: '70px',
+                  height: '70px',
                   background: 'white',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 22px auto',
-                  fontSize: '42px',
-                  boxShadow: '0 10px 25px rgba(76, 175, 80, 0.25)',
-                  border: '3px solid #e8f5e9'
+                  margin: '0 auto 15px auto',
+                  fontSize: '35px',
+                  boxShadow: '0 8px 20px rgba(76, 175, 80, 0.2)'
                 }}>
                   {item.icon}
                 </div>
-                
-                <h3 style={{
-                  color: '#1b5e20',
-                  fontSize: '23px',
-                  fontWeight: '800',
-                  marginBottom: '14px'
-                }}>
+                <h3 style={{color: '#1b5e20', fontSize: '20px', fontWeight: '800', marginBottom: '10px'}}>
                   {item.title}
                 </h3>
-                
-                <p style={{
-                  color: '#555',
-                  fontSize: '15px',
-                  lineHeight: '1.7'
-                }}>
+                <p style={{color: '#555', fontSize: '14px', lineHeight: '1.6'}}>
                   {item.desc}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* 3. STATS SECTION - Attraction ku */}
-      <div style={{
-        background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)',
-        padding: '70px 20px'
+      {/* SECTION 3: STATS */}
+      <section style={{
+        padding: '50px 20px',
+        background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)'
       }}>
         <div style={{
-          maxWidth: '1000px',
+          maxWidth: '950px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-          gap: '40px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+          gap: '30px',
           textAlign: 'center'
         }}>
-          {stats.map((stat, index) => (
-            <div key={index}>
-              <div style={{
-                color: 'white',
-                fontSize: '48px',
-                fontWeight: '900',
-                marginBottom: '8px'
-              }}>
-                {stat.number}
-              </div>
-              <div style={{
-                color: '#c8e6c9',
-                fontSize: '16px',
-                fontWeight: '600'
-              }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
+          <div><div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>10K+</div><div style={{color: '#c8e6c9', fontSize: '14px', fontWeight: '600'}}>Farmers</div></div>
+          <div><div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>500+</div><div style={{color: '#c8e6c9', fontSize: '14px', fontWeight: '600'}}>Mandis</div></div>
+          <div><div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>24/7</div><div style={{color: '#c8e6c9', fontSize: '14px', fontWeight: '600'}}>Support</div></div>
+          <div><div style={{color: 'white', fontSize: '40px', fontWeight: '900'}}>100%</div><div style={{color: '#c8e6c9', fontSize: '14px', fontWeight: '600'}}>Free</div></div>
         </div>
-      </div>
+      </section>
 
-      {/* 4. FINAL CTA SECTION */}
-      <div style={{
-        padding: '90px 20px',
+      {/* SECTION 4: FINAL CTA */}
+      <section style={{
+        padding: '60px 20px',
         textAlign: 'center',
         background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)'
       }}>
-        <h2 style={{
-          color: '#1b5e20',
-          fontSize: '40px',
-          fontWeight: '900',
-          marginBottom: '18px'
-        }}>
+        <h2 style={{color: '#1b5e20', fontSize: '34px', fontWeight: '900', marginBottom: '12px'}}>
           Ready to Grow Smarter?
         </h2>
-        <p style={{
-          color: '#2e7d32',
-          fontSize: '18px',
-          marginBottom: '35px',
-          fontWeight: '500'
-        }}>
-          Join thousands of farmers already using Smart Farmer Portal
+        <p style={{color: '#2e7d32', fontSize: '16px', marginBottom: '25px', fontWeight: '500'}}>
+          Join thousands of farmers using Smart Farmer Portal today
         </p>
         <Link href="/login" style={{
           background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
           color: 'white',
-          padding: '20px 50px',
-          borderRadius: '16px',
-          fontSize: '19px',
+          padding: '16px 40px',
+          borderRadius: '14px',
+          fontSize: '17px',
           fontWeight: '800',
           textDecoration: 'none',
-          boxShadow: '0 15px 35px rgba(76,175,80,0.4)',
-          display: 'inline-block'
+          boxShadow: '0 12px 30px rgba(76,175,80,0.4)'
         }}>
           Start Free Today →
         </Link>
-      </div>
+      </section>
 
     </div>
   );
